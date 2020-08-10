@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: bemily-api
-          image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/bemily-proxy:latest
+          image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/bemily_api
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
