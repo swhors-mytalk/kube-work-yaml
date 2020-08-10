@@ -24,4 +24,3 @@ spec:
             backend:
               serviceName: bemily-sd
               servicePort: 8080
-
