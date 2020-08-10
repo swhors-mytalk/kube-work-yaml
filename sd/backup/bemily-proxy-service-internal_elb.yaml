@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bemily-proxy
+  labels:
+    role: message
+    service: bemily-proxy
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-internal: "true"
+    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: (https|http|ssl|tcp)
+spec:
+  type: LoadBalancer
+  selector:
+    role: message
+    service: bemily-proxy
+  ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    - name: forward
+      protocol: TCP
+      port: 80
+      targetPort: 8080

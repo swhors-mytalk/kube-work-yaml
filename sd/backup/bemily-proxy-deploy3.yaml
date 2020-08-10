@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bemily-proxy
+  labels:
+    service: bemily-proxy
+    role: message
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      role: message
+      service: bemily-proxy
+  template:
+    metadata:
+      labels:
+        role: message
+        service: bemily-proxy
+    spec:
+      containers:
+        - name: bemily-proxy
+          image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/bemily-proxy:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+      nodeSelector:
+        role: message
+        service: bemily-proxy
+

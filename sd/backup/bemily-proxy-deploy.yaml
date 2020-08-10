@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bemily-proxy
+  labels:
+    app: bemily-proxy
+spec:
+  selector:
+    matchLabels:
+      run: bemily-proxy
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        run: bemily-proxy
+    spec:
+      containers:
+      - name: bemily-proxy
+        image: bemily/bemily-proxy:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8008
+          protocol: TCP
+

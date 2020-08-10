@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bemily-proxy
+  labels:
+    app: bemily-proxy
+spec:
+  containers:
+  - name: bemily-proxy
+    image: bemily/bemily-proxy:latest

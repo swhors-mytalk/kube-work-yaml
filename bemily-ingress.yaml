@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: bemily
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/subnets: subnet-00b00b54207b3267b, subnet-0ccbeb255a8b5a2fb
+    alb.ingress.kubernetes.io/tags: Name=dev-bemily-alb, role=api, service=alb
+    alb.ingress.kubernetes.io/security-groups: sg-0dd1f00ac4b2104f0
+    alb.ingress.kubernetes.io/ingress-name: dev-bemily-proxy-alb
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":8080}]'
+    alb.ingress.kubernetes.io/healthcheck-path: /hello
+
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /sd/v1/msg/*
+            backend:
+              serviceName: bemily-sd
+              servicePort: 8080
+          - path: /sd/cas/hello
+            backend:
+              serviceName: bemily-sd
+              servicePort: 8080
+

@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: bemily
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/actions.response-503: >
+      {"Type":"fixed-response","FixedResponseConfig":{"ContentType":"text/plain","StatusCode":"503","MessageBody":"503 error text"}}
+    alb.ingress.kubernetes.io/actions.forward-single-tg: >
+      {"Type":"forward","ForwardConfig":{"TargetGroups":[{"ServiceName":"bemily-proxy","ServicePort":"8080","Weight":100}],"TargetGroupStickinessConfig":{"Enabled":true,"DurationSeconds":200}}}
+    app.kubernetes.io/name: alb-ingress-controller
+  label:
+    node_tag: api
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /hello
+            backend:
+              serviceName: bemily-proxy
+              servicePort: 8080
+          - path: /
+            backend:
+              serviceName: bemily-proxy1
+              servicePort: 8080
+

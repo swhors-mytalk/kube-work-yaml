@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bemily-proxy
+  labels:
+          #service-name: bemily-proxy
+    app: bemily-proxy
+spec:
+  containers:
+  - name: bemily-proxy
+    image: bemily/bemily-proxy:latest
+    readinessProbe:
+      httpGet:
+        path: /
+        port: 8008
+    livenessProbe:
+      httpGet:
+        path: /
+        port: 8008

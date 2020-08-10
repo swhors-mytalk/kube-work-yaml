@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bemily-auth
+  labels:
+    node_tag: auth
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      node_tag: auth
+  template:
+    metadata:
+      labels:
+        node_tag: auth
+    spec:
+      containers:
+        - name: bemily-auth
+          image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/bemily-proxy:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+      nodeSelector:
+        node_tag: auth
+~
+

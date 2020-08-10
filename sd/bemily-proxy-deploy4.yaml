@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bemily-sd
+  labels:
+    node_tag: sd
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      node_tag: sd
+  template:
+    metadata:
+      labels:
+        node_tag: sd
+    spec:
+      containers:
+        - name: bemily-sd
+          image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/bemily-proxy:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+      nodeSelector:
+        node_tag: sd
+~
+

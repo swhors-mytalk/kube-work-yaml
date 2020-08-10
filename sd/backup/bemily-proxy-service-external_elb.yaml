@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bemily-proxy
+  labels:
+    role: message
+    service: bemily-proxy
+spec:
+  type: LoadBalancer
+  selector:
+    role: message
+    service: bemily-proxy
+  ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    - name: forward
+      protocol: TCP
+      port: 80
+      targetPort: 8080

@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bemily-proxy
+  labels:
+    app: bemily-proxy
+    app.kubernetes.io/name: bemily-proxy
+spec:
+  selector:
+    matchLabels:
+      run: bemily-proxy
+      app.kubernetes.io/name: bemily-proxy
+  replicas: 2
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        run: bemily-proxy
+        app.kubernetes.io/name: bemily-proxy
+    spec:
+      containers:
+      - name: bemily-proxy
+        image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/bemily-proxy:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+
