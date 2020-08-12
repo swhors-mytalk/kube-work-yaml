@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bemily-file
+  labels:
+    node_tag: file
+spec:
+  type: NodePort
+  selector:
+    node_tag: file
+  ports:
+    - name: bemily-file
+      port: 38080
+      protocol: TCP
+      targetPort: 38080
