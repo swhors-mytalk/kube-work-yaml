@@ -24,3 +24,7 @@ spec:
             backend:
               serviceName: bemily-sd
               servicePort: 8080
+          - path: /api/v1/*
+            backend:
+              serviceName: bemily-api
+              servicePort: 8080
