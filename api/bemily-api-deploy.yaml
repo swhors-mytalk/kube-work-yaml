@@ -19,6 +19,6 @@ spec:
           image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/bemily_api
           imagePullPolicy: Always
           ports:
-            - containerPort: 8080
+            - containerPort: 8000
       nodeSelector:
         node_tag: api
