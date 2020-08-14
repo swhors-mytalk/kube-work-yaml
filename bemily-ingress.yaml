@@ -49,3 +49,7 @@ spec:
             backend:
               serviceName: bemily-api
               servicePort: 8000
+          -path: /noti/v1/msg/*
+            backend:
+              serviceName: bemily-noti
+              servicePort: 8080
