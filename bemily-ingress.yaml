@@ -29,3 +29,8 @@ spec:
             backend:
               serviceName: bemily-file
               servicePort: 38080
+          - path: /noti/v1/msg/*
+            backend:
+              serviceName: bemily-noti
+              servicePort: 8080
+              servicePort: 8080
