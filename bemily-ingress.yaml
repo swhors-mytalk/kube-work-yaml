@@ -49,5 +49,3 @@ spec:
             backend:
               serviceName: bemily-api
               servicePort: 8000
-
-
