@@ -33,4 +33,3 @@ spec:
             backend:
               serviceName: bemily-noti
               servicePort: 8080
-              servicePort: 8080
