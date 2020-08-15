@@ -4,6 +4,7 @@ metadata:
   name: bemily-noti
   labels:
     node_tag: noti
+    color: blue
 spec:
   type: NodePort
   selector:

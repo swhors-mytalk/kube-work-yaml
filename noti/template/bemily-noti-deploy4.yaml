@@ -4,6 +4,7 @@ metadata:
   name: bemily-noti
   labels:
     node_tag: noti
+    color: blue
 spec:
   replicas: 2
   selector:
@@ -29,3 +30,4 @@ spec:
               cpu: "500m"
       nodeSelector:
         node_tag: noti
+        color: blue
