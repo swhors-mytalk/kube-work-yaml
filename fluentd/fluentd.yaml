@@ -70,7 +70,7 @@ spec:
             - name:  FLUENT_ELASTICSEARCH_HOST
               value: "vpc-dev-an2-els-bemily-v3uhvuymhcqh35pkttr44vsvni.ap-northeast-2.es.amazonaws.com"
             - name:  FLUENT_ELASTICSEARCH_PORT
-              value: "9200"
+              value: "443"
             - name: FLUENT_ELASTICSEARCH_SCHEME
               value: "https"
             - name: FLUENTD_SYSTEMD_CONF
