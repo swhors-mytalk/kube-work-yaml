@@ -4,11 +4,11 @@ metadata:
   name: bemily-noti
   labels:
     node_tag: noti
-    color : green
 spec:
   type: NodePort
   selector:
     node_tag: noti
+    color: green
   ports:
     - name: bemily-noti
       port: 8080

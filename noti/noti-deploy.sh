@@ -1,6 +1,8 @@
 #!/bin/bash
 
-ENABLED=0
+ENABLED=1
+
+SVC_NAME=bemily-noti
 
 DEPLOY_FILE=template/bemily-noti-deploy4.yaml
 SERVICE_FILE=template/bemily-noti-service-node_port.yaml
@@ -74,6 +76,17 @@ create_service
 
 
 if [ "$ENABLED" -eq 1 ]; then
+  echo "---------------------------"
+  echo "| Start to deploy         |"
+  echo "---------------------------"
+  echo ""
   kubectl apply -f $SVC_DEP_FILE
+  sleep 5
+  kubectl delete deploy ${SVC_NAME}"-"${COLOR}
+  sleep 10
+  echo "completed to depoly from "${COLOR}" to "${NEXT_COLOR}
+  echo ""
+  echo ""
+  kubectl describe svc ${SVC_NAME}
 fi
 
