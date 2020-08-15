@@ -4,7 +4,7 @@ metadata:
   name: bemily-noti
   labels:
     node_tag: noti
-    color: blue
+    color : green
 spec:
   maxReplicas: 4
   minReplicas: 2
