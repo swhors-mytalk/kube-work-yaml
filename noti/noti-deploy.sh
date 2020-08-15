@@ -1,4 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
+########################################################
+#
+# bemily-noti blue-green deploy scription
+#
+# v1 : 2020/08/15, initially created
+#
+########################################################
 
 ENABLED=1
 
@@ -69,7 +76,7 @@ COLOR=$(find_color)
 
 NEXT_COLOR=$(get_next_color ${COLOR})
 
-echo "CURRENT="$COLOR", NEXT="$NEXT_COLOR
+echo "CURRENT =" $COLOR ",NEXT =" $NEXT_COLOR
 
 change_color ${COLOR} ${NEXT_COLOR}
 create_service
