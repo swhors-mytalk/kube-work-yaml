@@ -9,6 +9,11 @@ spec:
   selector:
     matchLabels:
       node_tag: sd
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnvailable: 1
+      maxSurge: 2
   template:
     metadata:
       labels:
