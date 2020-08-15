@@ -44,7 +44,7 @@ for fileName in "${FILES[@]}"
 do
   echo 'file='$fileName
   sed -e "s/${COLOR}/${NEXT_COLOR}/g" "${fileName}" > "${fileName}_new"
-  mv ${fileName_new} ${fileName}
+  mv "${fileName}_new" "${fileName}"
 done
 
 
