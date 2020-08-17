@@ -1,0 +1,27 @@
+# Basic Setting
+global:
+  scrape_interval:     60s
+  evaluation_interval: 60s
+  # scrpae_timeout: 10s
+
+# Alertmanager Setting
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093
+
+# Rules Setting
+# Once loaded rules, these are evaluated periodically by evaluation_interval settings.
+rule_files:
+# - "first_rules.yml"
+# - "second_rules.yml"
+
+# Setting for endpoints that will collect mectric.
+scrape_configs:
+  # ? ???? ??? ?????? 'job=<job_name>'?? ?? ??? ????.
+  - job_name: 'prometheus'
+    # metrics_path: '/metrics'
+    # scheme: 'http'
+    static_configs:
+      - targets: ['localhost:9090']
