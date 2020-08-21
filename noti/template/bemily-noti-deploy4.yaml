@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bemily-noti-green
+  name: bemily-noti-blue
   labels:
     node_tag: noti
-    color: green
+    color: blue
 spec:
   replicas: 2
   selector:
     matchLabels:
       node_tag: noti
-      color: green
+      color: blue
   template:
     metadata:
       labels:
         node_tag: noti
-        color: green
+        color: blue
     spec:
       containers:
         - name: noti

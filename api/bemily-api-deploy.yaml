@@ -16,16 +16,9 @@ spec:
     spec:
       containers:
         - name: bemily-api
-          image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/bemily_api
+          image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/bemily_api:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 8000
-          resources:
-            requests:
-              memory: "1500Mi"
-              cpu: "500m"
-            limits:
-              memory: "2000Mi"
-              cpu: "500m"
+            - containerPort: 7000
       nodeSelector:
         node_tag: api

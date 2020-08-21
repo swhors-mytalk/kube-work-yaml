@@ -19,7 +19,7 @@ spec:
           image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/auth:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 8080
+            - containerPort: 38081
           resources:
             requests:
               memory: "1500Mi"
