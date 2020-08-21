@@ -29,27 +29,31 @@ spec:
             backend:
               serviceName: bemily-file
               servicePort: 38080
+          - path: /auth/*
+            backend:
+              serviceName: bemily-auth
+              servicePort: 38081
           - path: /api/account/*
             backend:
               serviceName: bemily-api
-              servicePort: 8000
+              servicePort: 7000
           - path: /api/friends/*
             backend:
               serviceName: bemily-api
-              servicePort: 8000
+              servicePort: 7000
           - path: /api/group/*
             backend:
               serviceName: bemily-api
-              servicePort: 8000
+              servicePort: 7000
           - path: /api/chat/*
             backend:
               serviceName: bemily-api
-              servicePort: 8000
+              servicePort: 7000
           - path: /api/profile/*
             backend:
               serviceName: bemily-api
-              servicePort: 8000
-          -path: /noti/v1/msg/*
+              servicePort: 7000
+          - path: /noti/v1/msg/*
             backend:
               serviceName: bemily-noti
               servicePort: 8080
