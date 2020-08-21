@@ -12,5 +12,5 @@ spec:
     - name: bemily-sd
       port: 8080
       protocol: TCP
-      nodePort: 30501
+      nodePort: 30600
       targetPort: 8080

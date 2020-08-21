@@ -49,6 +49,7 @@ spec:
     - name: bemily-noti
       port: 8080
       protocol: TCP
+      nodePort: 30501
       targetPort:
 
 ---

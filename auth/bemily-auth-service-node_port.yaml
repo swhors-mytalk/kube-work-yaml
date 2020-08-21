@@ -12,4 +12,5 @@ spec:
     - name: bemily-auth
       port: 38081
       protocol: TCP
+      nodePort: 30620
       targetPort: 38081
