@@ -11,4 +11,4 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: bemily-noti
-  targetCPUUtilizationPercentage: 30
+  targetCPUUtilizationPercentage: 80
