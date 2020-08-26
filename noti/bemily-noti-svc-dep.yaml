@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bemily-noti-blue
+  name: bemily-noti-green
   labels:
     node_tag: noti
-    color: blue
+    color: green
 spec:
   replicas: 2
   selector:
     matchLabels:
       node_tag: noti
-      color: blue
+      color: green
   template:
     metadata:
       labels:
         node_tag: noti
-        color: blue
+        color: green
     spec:
       containers:
         - name: noti
@@ -44,7 +44,7 @@ spec:
   type: NodePort
   selector:
     node_tag: noti
-    color: blue
+    color: green
   ports:
     - name: bemily-noti
       port: 8080
@@ -59,7 +59,7 @@ metadata:
   name: bemily-noti
   labels:
     node_tag: noti
-    color : blue
+    color : green
 spec:
   maxReplicas: 4
   minReplicas: 2
@@ -67,4 +67,4 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: bemily-noti
-  targetCPUUtilizationPercentage: 30
+  targetCPUUtilizationPercentage: 80
