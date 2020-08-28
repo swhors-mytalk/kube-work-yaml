@@ -11,4 +11,4 @@ spec:
     apiVersion: extensions/v1beta1
     kind: Deployment
     name: bemily-sd
-  targetCPUUtilizationPercentage: 4
+  targetCPUUtilizationPercentage: 50
