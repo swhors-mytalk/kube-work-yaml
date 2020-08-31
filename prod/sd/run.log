@@ -1,0 +1,1320 @@
+bash: warning: setlocale: LC_ALL: cannot change locale (ko_KR.UTF-8)
+-------------------------------------------
+| bemily-proxy running scriptor           |
+| run.sh                                  |
+|                                         |
+|               license_admin@bemily.com  |
+-------------------------------------------
+\n
+ARG0=-Djdk.nio.maxCachedBufferSize=1048576
+ARG1=--spring.profiles.active=dev
+\n
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/bemily/bemily-proxy/bemily-proxy.jar!/BOOT-INF/lib/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/bemily/bemily-proxy/bemily-proxy.jar!/BOOT-INF/lib/log4j-slf4j-impl-2.12.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.8.RELEASE)
+
+04:49 INFO  com.bemily.BemilyProxyApplication - Starting BemilyProxyApplication v0.0.1-SNAPSHOT on bemily-sd-5b6d5c7775-6l8zr with PID 6 (/home/bemily/bemily-proxy/bemily-proxy.jar started by bemily in /home/bemily/bemily-proxy)
+04:49 DEBUG com.bemily.BemilyProxyApplication - Running with Spring Boot v2.2.8.RELEASE, Spring v5.2.7.RELEASE
+04:49 INFO  com.bemily.BemilyProxyApplication - The following profiles are active: dev
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75ms. Found 0 Redis repository interfaces.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Cassandra repositories in DEFAULT mode.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Cassandra - Could not safely identify store assignment for repository candidate interface com.bemily.domain.repo.jpa.MsgAnnouncementRepository. If you want this repository to be a Reactive Cassandra repository, consider annotating your entities with one of these annotations: org.springframework.data.cassandra.core.mapping.Table (preferred), or consider extending one of the following types with your repository: org.springframework.data.cassandra.repository.ReactiveCassandraRepository.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Cassandra - Could not safely identify store assignment for repository candidate interface com.bemily.domain.repo.jpa.TimeMsgRepository. If you want this repository to be a Reactive Cassandra repository, consider annotating your entities with one of these annotations: org.springframework.data.cassandra.core.mapping.Table (preferred), or consider extending one of the following types with your repository: org.springframework.data.cassandra.repository.ReactiveCassandraRepository.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Cassandra - Could not safely identify store assignment for repository candidate interface com.bemily.domain.repo.AccountRepository. If you want this repository to be a Reactive Cassandra repository, consider annotating your entities with one of these annotations: org.springframework.data.cassandra.core.mapping.Table (preferred), or consider extending one of the following types with your repository: org.springframework.data.cassandra.repository.ReactiveCassandraRepository.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Cassandra - Could not safely identify store assignment for repository candidate interface com.bemily.domain.repo.jpa.UserDeviceRepository. If you want this repository to be a Reactive Cassandra repository, consider annotating your entities with one of these annotations: org.springframework.data.cassandra.core.mapping.Table (preferred), or consider extending one of the following types with your repository: org.springframework.data.cassandra.repository.ReactiveCassandraRepository.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 303ms. Found 0 Reactive Cassandra repository interfaces.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Cassandra - Could not safely identify store assignment for repository candidate interface com.bemily.domain.repo.jpa.MsgAnnouncementRepository. If you want this repository to be a Cassandra repository, consider annotating your entities with one of these annotations: org.springframework.data.cassandra.core.mapping.Table (preferred), or consider extending one of the following types with your repository: org.springframework.data.cassandra.repository.CassandraRepository.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Cassandra - Could not safely identify store assignment for repository candidate interface com.bemily.domain.repo.jpa.TimeMsgRepository. If you want this repository to be a Cassandra repository, consider annotating your entities with one of these annotations: org.springframework.data.cassandra.core.mapping.Table (preferred), or consider extending one of the following types with your repository: org.springframework.data.cassandra.repository.CassandraRepository.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Cassandra - Could not safely identify store assignment for repository candidate interface com.bemily.domain.repo.AccountRepository. If you want this repository to be a Cassandra repository, consider annotating your entities with one of these annotations: org.springframework.data.cassandra.core.mapping.Table (preferred), or consider extending one of the following types with your repository: org.springframework.data.cassandra.repository.CassandraRepository.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Cassandra - Could not safely identify store assignment for repository candidate interface com.bemily.domain.repo.jpa.UserDeviceRepository. If you want this repository to be a Cassandra repository, consider annotating your entities with one of these annotations: org.springframework.data.cassandra.core.mapping.Table (preferred), or consider extending one of the following types with your repository: org.springframework.data.cassandra.repository.CassandraRepository.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 177ms. Found 1 Cassandra repository interfaces.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.bemily.domain.repo.BemilyMsgRepository. If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 110ms. Found 4 JPA repository interfaces.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bemily.domain.repo.jpa.MsgAnnouncementRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bemily.domain.repo.jpa.TimeMsgRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bemily.domain.repo.AccountRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bemily.domain.repo.BemilyMsgRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bemily.domain.repo.jpa.UserDeviceRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+04:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 84ms. Found 0 Redis repository interfaces.
+04:49 INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+04:49 INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+04:49 INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+04:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+04:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+04:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+04:49 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+04:49 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+04:49 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+04:49 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+04:49 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+04:49 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 12998 ms
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.mariadb.jdbc.Driver found in Thread context class loader org.springframework.boot.loader.LaunchedURLClassLoader@5c29bfd
+04:50 DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+04:50 DEBUG o.h.jpa.internal.util.LogHelper - PersistenceUnitInfo [
+	name: default
+	persistence provider classname: null
+	classloader: org.springframework.boot.loader.LaunchedURLClassLoader@5c29bfd
+	excludeUnlistedClasses: true
+	JTA datasource: null
+	Non JTA datasource: HikariDataSource (null)
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/home/bemily/bemily-proxy/bemily-proxy.jar
+	Shared Cache Mode: UNSPECIFIED
+	Validation Mode: AUTO
+	Jar files URLs []
+	Managed classes names [
+		com.bemily.domain.model.account.Account
+		com.bemily.domain.model.mysql.TimeMsg
+		com.bemily.domain.model.mysql.MsgAnnouncement
+		com.bemily.domain.model.mysql.UserDevice
+		com.bemily.domain.model.mysql.DeletedMsgsLists]
+	Mapping files names []
+	Properties []
+04:50 DEBUG o.h.i.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+04:50 DEBUG o.h.i.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+04:50 DEBUG o.h.i.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+04:50 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.17.Final
+04:50 DEBUG org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+04:50 DEBUG o.h.service.spi.ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+04:50 DEBUG o.h.c.i.RegionFactoryInitiator - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+04:50 DEBUG o.h.c.i.RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+04:50 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@1d01dfa5
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@1d01dfa5
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@1d01dfa5
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@d400943
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@31ff1390
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@781a9412
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@267bbe1a
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@267bbe1a
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@267bbe1a
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@5a101b1c
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@5a101b1c
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@5a101b1c
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@3a60c416
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@3a60c416
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@3a60c416
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@6b410923
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@6b410923
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@6b410923
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@e8fadb0
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@e8fadb0
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@e8fadb0
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@1d3e6d34
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@1d3e6d34
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@1d3e6d34
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@464a4442
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@464a4442
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@464a4442
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@577f9109
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@577f9109
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@779de014
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@779de014
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@5ec77191
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@5ec77191
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@1450078a
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@69c6161d
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@6719a5b8
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@6719a5b8
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@6bff19ff
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@6bff19ff
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@5eccd3b9
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@5eccd3b9
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@64e1dd11
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@64e1dd11
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@14bae047
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@14bae047
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@41477a6d
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@41477a6d
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@534ca02b
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@534ca02b
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@6fe46b62
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@6fe46b62
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@7c9b78e3
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@7c9b78e3
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@6ecd665
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@6ecd665
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@5bb3131b
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@5bb3131b
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@69eb86b4
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@69eb86b4
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@69eb86b4
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@5bb8f9e2
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@4d8539de
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@4d8539de
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@4d8539de
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@30feffc
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@7c2a69b4
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@375b5b7f
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@375b5b7f
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@3b152928
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@3b152928
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@25c5e994
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@25c5e994
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@69b2f8e5
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@69b2f8e5
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@644abb8f
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@644abb8f
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@70325d20
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@3d7fa3ae
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@3d7fa3ae
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@3d7fa3ae
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@585c13de
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@585c13de
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@585c13de
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@6ad11a56
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@3ff57625
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@77128dab
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@77128dab
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@77128dab
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@c9d82f9
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@c9d82f9
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@c9d82f9
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@18fdb6cf
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@60baef24
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@45f24169
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@45f24169
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@4463d9d3
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@4fe01803
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@4fe01803
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@a0a9fa5
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@a0a9fa5
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@312afbc7
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@7b60c3e
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@710d7aff
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@72458efc
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@72458efc
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@6a74d228
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@349d0836
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@6a714237
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@3e134896
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@72ba28ee
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@2e3a5237
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@4ebadd3d
+04:50 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@6ac97b84
+04:50 DEBUG o.h.b.internal.BootstrapContextImpl - Injecting JPA temp ClassLoader [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@75f2099] into BootstrapContext; was [null]
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - ClassLoaderAccessImpl#injectTempClassLoader(org.springframework.instrument.classloading.SimpleThrowawayClassLoader@75f2099) [was null]
+04:50 DEBUG o.h.b.internal.BootstrapContextImpl - Injecting ScanEnvironment [org.hibernate.jpa.boot.internal.StandardJpaScanEnvironmentImpl@29182679] into BootstrapContext; was [null]
+04:50 DEBUG o.h.b.internal.BootstrapContextImpl - Injecting ScanOptions [org.hibernate.boot.archive.scan.internal.StandardScanOptions@57bd802b] into BootstrapContext; was [org.hibernate.boot.archive.scan.internal.StandardScanOptions@5cbb84b1]
+04:50 DEBUG o.h.b.internal.BootstrapContextImpl - Injecting JPA temp ClassLoader [null] into BootstrapContext; was [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@75f2099]
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - ClassLoaderAccessImpl#injectTempClassLoader(null) [was org.springframework.instrument.classloading.SimpleThrowawayClassLoader@75f2099]
+04:50 DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+04:50 DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+04:50 DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+04:50 DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+04:50 DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+04:50 DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+04:50 DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+04:50 DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+04:50 DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+04:50 DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+04:50 DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+04:50 DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+04:50 DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+04:50 DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.mariadb.jdbc.Driver"
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mariadb://dev-an2-db-bemily.cluster-cgh9n5perwby.ap-northeast-2.rds.amazonaws.com:3306/mytalk
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - username........................"bemilydb"
+04:50 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+04:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+04:50 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@31fc71ab
+04:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+04:50 DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator - Database ->
+       name : MySQL
+    version : 5.7.12
+      major : 5
+      minor : 7
+04:50 DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator - Driver ->
+       name : MariaDB Connector/J
+    version : 2.6.1
+      major : 2
+      minor : 6
+04:50 DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator - JDBC version : 4.2
+04:50 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=1, idle=0, waiting=0)
+04:50 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+04:50 DEBUG o.h.e.j.e.s.IdentifierHelperBuilder - JDBC driver metadata reported database stores unquoted identifiers in neither upper, lower nor mixed case
+04:50 DEBUG o.h.e.j.e.s.IdentifierHelperBuilder - JDBC driver metadata reported database stores quoted identifiers in neither upper, lower nor mixed case
+04:50 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@47bb7f8
+04:50 DEBUG o.h.e.j.e.s.IdentifierHelperBuilder - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+04:50 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@abc4907
+04:50 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@e83dc88
+04:50 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@4b81433c
+04:50 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@129ce9c3
+04:50 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@7a006ee6
+04:50 DEBUG o.h.boot.model.relational.Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+04:50 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@6af79ab2
+04:50 DEBUG o.h.type.spi.TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@77bd7fe7] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@35d3ab60]
+04:50 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@2baebc73
+04:50 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@5e899a34
+04:50 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+04:50 DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.bemily.domain.model.account.Account
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+04:50 DEBUG o.h.cfg.annotations.EntityBinder - Import with entity name Account
+04:50 DEBUG o.h.cfg.annotations.EntityBinder - Bind entity com.bemily.domain.model.account.Account on table account
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(account), mappingColumn=account_idx, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property account_idx with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.account.Account:account_idx]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for account_idx
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property account_idx
+04:50 DEBUG org.hibernate.cfg.BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(account_idx)]), account_idx, org.hibernate.id.enhanced.SequenceStyleGenerator, , ...)
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(account), mappingColumn=email, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property email with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.account.Account:email]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for email
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property email
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(account), mappingColumn=password, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property password with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.account.Account:password]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for password
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property password
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(account), mappingColumn=status, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property status with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.account.Account:status]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for status
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property status
+04:50 DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.bemily.domain.model.mysql.TimeMsg
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+04:50 DEBUG o.h.cfg.annotations.EntityBinder - Import with entity name time_msg
+04:50 DEBUG o.h.cfg.annotations.EntityBinder - Bind entity com.bemily.domain.model.mysql.TimeMsg on table time_msg
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(time_msg), mappingColumn=idx, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property idx with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.TimeMsg:idx]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for idx
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property idx
+04:50 DEBUG org.hibernate.cfg.BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(idx)]), idx, org.hibernate.id.enhanced.SequenceStyleGenerator, , ...)
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(time_msg), mappingColumn=create_time, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property createTime with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.TimeMsg:createTime]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for createTime
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property createTime
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(time_msg), mappingColumn=duration, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property duration with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.TimeMsg:duration]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for duration
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property duration
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(time_msg), mappingColumn=request_time, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property requestTime with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.TimeMsg:requestTime]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for requestTime
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property requestTime
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(time_msg), mappingColumn=sender_idx, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property senderIdx with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.TimeMsg:senderIdx]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for senderIdx
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property senderIdx
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(time_msg), mappingColumn=target_idx, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property targetIdx with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.TimeMsg:targetIdx]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for targetIdx
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property targetIdx
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(time_msg), mappingColumn=target_type, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property targetType with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.TimeMsg:targetType]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for targetType
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property targetType
+04:50 DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.bemily.domain.model.mysql.MsgAnnouncement
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+04:50 DEBUG o.h.cfg.annotations.EntityBinder - Import with entity name msg_announcement
+04:50 DEBUG o.h.cfg.annotations.EntityBinder - Bind entity com.bemily.domain.model.mysql.MsgAnnouncement on table msg_announcement
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(msg_announcement), mappingColumn=idx, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property idx with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.MsgAnnouncement:idx]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for idx
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property idx
+04:50 DEBUG org.hibernate.cfg.BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(idx)]), idx, org.hibernate.id.enhanced.SequenceStyleGenerator, , ...)
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(msg_announcement), mappingColumn=create_time, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property createTime with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.MsgAnnouncement:createTime]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for createTime
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property createTime
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(msg_announcement), mappingColumn=msg_idx, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property msgIdx with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.MsgAnnouncement:msgIdx]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for msgIdx
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property msgIdx
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(msg_announcement), mappingColumn=sender_idx, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property senderIdx with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.MsgAnnouncement:senderIdx]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for senderIdx
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property senderIdx
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(msg_announcement), mappingColumn=target_idx, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property targetIdx with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.MsgAnnouncement:targetIdx]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for targetIdx
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property targetIdx
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(msg_announcement), mappingColumn=target_type, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property targetType with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.MsgAnnouncement:targetType]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for targetType
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property targetType
+04:50 DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.bemily.domain.model.mysql.UserDevice
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+04:50 DEBUG o.h.cfg.annotations.EntityBinder - Import with entity name user_device
+04:50 DEBUG o.h.cfg.annotations.EntityBinder - Bind entity com.bemily.domain.model.mysql.UserDevice on table user_device
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user_device), mappingColumn=account_idx, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property accountIdx with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.UserDevice:accountIdx]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for accountIdx
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property accountIdx
+04:50 DEBUG org.hibernate.cfg.BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(account_idx)]), accountIdx, org.hibernate.id.enhanced.SequenceStyleGenerator, , ...)
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user_device), mappingColumn=app_version, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property appVersion with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.UserDevice:appVersion]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for appVersion
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property appVersion
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user_device), mappingColumn=create_date, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property createDate with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.UserDevice:createDate]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for createDate
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property createDate
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user_device), mappingColumn=device_arn, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property deviceArn with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.UserDevice:deviceArn]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for deviceArn
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property deviceArn
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user_device), mappingColumn=device_id, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property deviceId with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.UserDevice:deviceId]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for deviceId
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property deviceId
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user_device), mappingColumn=device_token, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property deviceToken with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.UserDevice:deviceToken]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for deviceToken
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property deviceToken
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user_device), mappingColumn=os, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property os with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.UserDevice:os]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for os
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property os
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user_device), mappingColumn=update_date, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property updateDate with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.UserDevice:updateDate]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for updateDate
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property updateDate
+04:50 DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.bemily.domain.model.mysql.DeletedMsgsLists
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+04:50 DEBUG o.h.cfg.annotations.EntityBinder - Import with entity name deleted_msgs_lists
+04:50 DEBUG o.h.cfg.annotations.EntityBinder - Bind entity com.bemily.domain.model.mysql.DeletedMsgsLists on table deleted_msgs_lists
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(deleted_msgs_lists), mappingColumn=idx, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property idx with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.DeletedMsgsLists:idx]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for idx
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property idx
+04:50 DEBUG org.hibernate.cfg.BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(idx)]), idx, org.hibernate.id.enhanced.SequenceStyleGenerator, , ...)
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(deleted_msgs_lists), mappingColumn=create_time, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property createTime with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.DeletedMsgsLists:createTime]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for createTime
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property createTime
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(deleted_msgs_lists), mappingColumn=del_all, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property delAll with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.DeletedMsgsLists:delAll]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for delAll
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property delAll
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(deleted_msgs_lists), mappingColumn=end_pos, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property endPos with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.DeletedMsgsLists:endPos]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for endPos
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property endPos
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(deleted_msgs_lists), mappingColumn=msg_idx, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property msgIdx with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.DeletedMsgsLists:msgIdx]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for msgIdx
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property msgIdx
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(deleted_msgs_lists), mappingColumn=sender_idx, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property senderIdx with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.DeletedMsgsLists:senderIdx]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for senderIdx
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property senderIdx
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(deleted_msgs_lists), mappingColumn=target_idx, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property targetIdx with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.DeletedMsgsLists:targetIdx]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for targetIdx
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property targetIdx
+04:50 DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(deleted_msgs_lists), mappingColumn=target_type, insertable=true, updatable=true, unique=false}
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property targetType with lazy=false
+04:50 DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.bemily.domain.model.mysql.DeletedMsgsLists:targetType]
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for targetType
+04:50 DEBUG o.h.cfg.annotations.PropertyBinder - Building property targetType
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for account_idx
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for email
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for password
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for status
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for idx
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for createTime
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for duration
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for requestTime
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for senderIdx
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for targetIdx
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for targetType
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for idx
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for createTime
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for msgIdx
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for senderIdx
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for targetIdx
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for targetType
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for accountIdx
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for appVersion
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for createDate
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for deviceArn
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for deviceId
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for deviceToken
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for os
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for updateDate
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for idx
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for createTime
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for delAll
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for endPos
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for msgIdx
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for senderIdx
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for targetIdx
+04:50 DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for targetType
+04:50 DEBUG org.hibernate.mapping.PrimaryKey - Forcing column [account_idx] to be non-null as it is part of the primary key for table [account]
+04:50 DEBUG org.hibernate.mapping.PrimaryKey - Forcing column [idx] to be non-null as it is part of the primary key for table [time_msg]
+04:50 DEBUG org.hibernate.mapping.PrimaryKey - Forcing column [idx] to be non-null as it is part of the primary key for table [msg_announcement]
+04:50 DEBUG org.hibernate.mapping.PrimaryKey - Forcing column [account_idx] to be non-null as it is part of the primary key for table [user_device]
+04:50 DEBUG org.hibernate.mapping.PrimaryKey - Forcing column [idx] to be non-null as it is part of the primary key for table [deleted_msgs_lists]
+04:50 DEBUG o.h.internal.SessionFactoryImpl - Building session factory
+04:50 DEBUG org.hibernate.cfg.Settings - SessionFactory name : null
+04:50 DEBUG org.hibernate.cfg.Settings - Automatic flush during beforeCompletion(): enabled
+04:50 DEBUG org.hibernate.cfg.Settings - Automatic session close at end of transaction: disabled
+04:50 DEBUG org.hibernate.cfg.Settings - Statistics: disabled
+04:50 DEBUG org.hibernate.cfg.Settings - Deleted entity synthetic identifier rollback: disabled
+04:50 DEBUG org.hibernate.cfg.Settings - Default entity-mode: pojo
+04:50 DEBUG org.hibernate.cfg.Settings - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+04:50 DEBUG org.hibernate.cfg.Settings - Allow initialization of lazy state outside session : disabled
+04:50 DEBUG org.hibernate.cfg.Settings - Using BatchFetchStyle : LEGACY
+04:50 DEBUG org.hibernate.cfg.Settings - Default batch fetch size: -1
+04:50 DEBUG org.hibernate.cfg.Settings - Maximum outer join fetch depth: 2
+04:50 DEBUG org.hibernate.cfg.Settings - Default null ordering: NONE
+04:50 DEBUG org.hibernate.cfg.Settings - Order SQL updates by primary key: disabled
+04:50 DEBUG org.hibernate.cfg.Settings - Order SQL inserts for batching: disabled
+04:50 DEBUG org.hibernate.cfg.Settings - multi-tenancy strategy : NONE
+04:50 DEBUG org.hibernate.cfg.Settings - JTA Track by Thread: enabled
+04:50 DEBUG org.hibernate.cfg.Settings - Query language substitutions: {}
+04:50 DEBUG org.hibernate.cfg.Settings - Named query checking : enabled
+04:50 DEBUG org.hibernate.cfg.Settings - Second-level cache: disabled
+04:50 DEBUG org.hibernate.cfg.Settings - Second-level query cache: disabled
+04:50 DEBUG org.hibernate.cfg.Settings - Second-level query cache factory: null
+04:50 DEBUG org.hibernate.cfg.Settings - Second-level cache region prefix: null
+04:50 DEBUG org.hibernate.cfg.Settings - Optimize second-level cache for minimal puts: disabled
+04:50 DEBUG org.hibernate.cfg.Settings - Structured second-level cache entries: disabled
+04:50 DEBUG org.hibernate.cfg.Settings - Second-level cache direct-reference entries: disabled
+04:50 DEBUG org.hibernate.cfg.Settings - Automatic eviction of collection cache: disabled
+04:50 DEBUG org.hibernate.cfg.Settings - JDBC batch size: 15
+04:50 DEBUG org.hibernate.cfg.Settings - JDBC batch updates for versioned data: enabled
+04:50 DEBUG org.hibernate.cfg.Settings - Scrollable result sets: enabled
+04:50 DEBUG org.hibernate.cfg.Settings - Wrap result sets: disabled
+04:50 DEBUG org.hibernate.cfg.Settings - JDBC3 getGeneratedKeys(): enabled
+04:50 DEBUG org.hibernate.cfg.Settings - JDBC result set fetch size: null
+04:50 DEBUG org.hibernate.cfg.Settings - Connection release mode: ON_CLOSE
+04:50 DEBUG org.hibernate.cfg.Settings - Generate SQL with comments: disabled
+04:50 DEBUG org.hibernate.cfg.Settings - JPA compliance - query : disabled
+04:50 DEBUG org.hibernate.cfg.Settings - JPA compliance - closed-handling : disabled
+04:50 DEBUG org.hibernate.cfg.Settings - JPA compliance - lists : disabled
+04:50 DEBUG org.hibernate.cfg.Settings - JPA compliance - transactions : disabled
+04:50 DEBUG o.h.internal.SessionFactoryImpl - Session factory constructed with filter configurations : {}
+04:50 DEBUG o.h.internal.SessionFactoryImpl - Instantiating session factory with properties: {hibernate.format_sql=true, hibernate.id.new_generator_mappings=true, java.specification.version=14, hibernate.resource.beans.container=org.springframework.orm.hibernate5.SpringBeanContainer@76c52298, hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, sun.jnu.encoding=ANSI_X3.4-1968, hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect, hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy, java.class.path=bemily-proxy.jar, java.vm.vendor=Private Build, sun.arch.data.model=64, java.vendor.url=Unknown, catalina.useNaming=false, user.timezone=GMT, java.vm.specification.version=14, os.name=Linux, javax.persistence.validation.mode=AUTO, sun.java.launcher=SUN_STANDARD, user.country=US, sun.boot.library.path=/usr/lib/jvm/java-14-openjdk-amd64/lib, sun.java.command=bemily-proxy.jar --spring.profiles.active=dev, javax.persistence.nonJtaDataSource=HikariDataSource (HikariPool-1), hibernate.transaction.jta.platform=org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform@bb9ab64, javax.persistence.sharedCache.mode=UNSPECIFIED, jdk.debug=release, sun.cpu.endian=little, user.home=/home/bemily, user.language=en, java.specification.vendor=Oracle Corporation, java.version.date=2020-03-17, java.home=/usr/lib/jvm/java-14-openjdk-amd64, file.separator=/, java.vm.compressedOopsMode=32-bit, line.separator=
+, java.specification.name=Java Platform API Specification, java.vm.specification.vendor=Oracle Corporation, hibernate.transaction.coordinator_class=class org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl, java.awt.headless=true, hibernate.hbm2ddl.auto=update, java.protocol.handler.pkgs=org.springframework.boot.loader, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=14-ea+18-Ubuntu-1, user.name=bemily, jdk.nio.maxCachedBufferSize=1048576, path.separator=:, os.version=4.14.181-142.260.amzn2.x86_64, java.runtime.name=OpenJDK Runtime Environment, file.encoding=ANSI_X3.4-1968, hibernate.ejb.persistenceUnitName=default, spring.beaninfo.ignore=true, java.vm.name=OpenJDK 64-Bit Server VM, hibernate.show_sql=true, java.vendor.url.bug=Unknown, java.io.tmpdir=/tmp, catalina.home=/tmp/tomcat.10729216549498088197.8080, java.version=14-ea, hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy, user.dir=/home/bemily/bemily-proxy, os.arch=amd64, java.vm.specification.name=Java Virtual Machine Specification, PID=6, catalina.base=/tmp/tomcat.10729216549498088197.8080, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.registry.StandardServiceRegistryBuilder$1@a52ca2e, java.library.path=/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib, java.vendor=Private Build, java.vm.info=mixed mode, sharing, java.vm.version=14-ea+18-Ubuntu-1, hibernate.bytecode.use_reflection_optimizer=false, sun.io.unicode.encoding=UnicodeLittle, hibernate.archive.scanner=org.hibernate.boot.archive.scan.internal.DisabledScanner, hibernate.connection.datasource=HikariDataSource (HikariPool-1), java.class.version=58.0}
+04:50 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.20.Final
+04:50 DEBUG o.h.v.i.e.r.TraversableResolvers - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+04:50 DEBUG o.h.v.i.e.r.TraversableResolvers - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+04:50 DEBUG o.h.v.i.x.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+04:50 DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+04:50 DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+04:50 DEBUG o.h.v.i.x.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+04:50 DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+04:50 DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+04:50 DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+04:50 DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+04:50 DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+04:50 DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.bemily.domain.model.mysql.UserDevice] is safe
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.bemily.domain.model.mysql.UserDevice
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.bemily.domain.model.mysql.MsgAnnouncement] is safe
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.bemily.domain.model.mysql.MsgAnnouncement
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.bemily.domain.model.mysql.TimeMsg] is safe
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.bemily.domain.model.mysql.TimeMsg
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.bemily.domain.model.account.Account] is safe
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.bemily.domain.model.account.Account
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.bemily.domain.model.mysql.DeletedMsgsLists] is safe
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.bemily.domain.model.mysql.DeletedMsgsLists
+04:50 DEBUG o.h.secure.spi.JaccIntegrator - Skipping JACC integration as it was not enabled
+04:50 DEBUG o.h.internal.SessionFactoryImpl - Instantiated session factory
+04:50 DEBUG o.h.type.spi.TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@77bd7fe7] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@7c853486]
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.bemily.domain.model.mysql.UserDevice] is safe
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.bemily.domain.model.mysql.UserDevice
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.bemily.domain.model.mysql.UserDevice] is safe
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.bemily.domain.model.mysql.UserDevice
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.bemily.domain.model.mysql.MsgAnnouncement] is safe
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.bemily.domain.model.mysql.MsgAnnouncement
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.bemily.domain.model.mysql.MsgAnnouncement] is safe
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.bemily.domain.model.mysql.MsgAnnouncement
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.bemily.domain.model.mysql.TimeMsg] is safe
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.bemily.domain.model.mysql.TimeMsg
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.bemily.domain.model.mysql.TimeMsg] is safe
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.bemily.domain.model.mysql.TimeMsg
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.bemily.domain.model.account.Account] is safe
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.bemily.domain.model.account.Account
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.bemily.domain.model.account.Account] is safe
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.bemily.domain.model.account.Account
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.bemily.domain.model.mysql.DeletedMsgsLists] is safe
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.bemily.domain.model.mysql.DeletedMsgsLists
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.bemily.domain.model.mysql.DeletedMsgsLists] is safe
+04:50 DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.bemily.domain.model.mysql.DeletedMsgsLists
+04:50 INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: com.bemily.domain.model.mysql.DeletedMsgsLists (class must be instantiated by Interceptor)
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister - Static SQL for entity: com.bemily.domain.model.mysql.UserDevice
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Version select: select account_idx from user_device where account_idx =?
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Snapshot select: select userdevice_.account_idx, userdevice_.app_version as app_vers2_4_, userdevice_.create_date as create_d3_4_, userdevice_.device_arn as device_a4_4_, userdevice_.device_id as device_i5_4_, userdevice_.device_token as device_t6_4_, userdevice_.os as os7_4_, userdevice_.update_date as update_d8_4_ from user_device userdevice_ where userdevice_.account_idx=?
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Insert 0: insert into user_device (app_version, create_date, device_arn, device_id, device_token, os, update_date, account_idx) values (?, ?, ?, ?, ?, ?, ?, ?)
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Update 0: update user_device set app_version=?, create_date=?, device_arn=?, device_id=?, device_token=?, os=?, update_date=? where account_idx=?
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Delete 0: delete from user_device where account_idx=?
+04:50 DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1e8ab90f]
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : appVersion
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : createDate
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : deviceArn
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : deviceId
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : deviceToken
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : os
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : updateDate
+04:50 DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+04:50 DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+04:50 DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=com.bemily.domain.model.mysql.UserDevice)
+    - Returns
+       - EntityReturnImpl(entity=com.bemily.domain.model.mysql.UserDevice, querySpaceUid=<gen:0>, path=com.bemily.domain.model.mysql.UserDevice)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.bemily.domain.model.mysql.UserDevice)
+          - SQL table alias mapping - userdevice0_
+          - alias suffix - 0_
+          - suffixed key columns - {account_1_4_0_}
+
+04:50 DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.bemily.domain.model.mysql.UserDevice [NONE]: select userdevice0_.account_idx as account_1_4_0_, userdevice0_.app_version as app_vers2_4_0_, userdevice0_.create_date as create_d3_4_0_, userdevice0_.device_arn as device_a4_4_0_, userdevice0_.device_id as device_i5_4_0_, userdevice0_.device_token as device_t6_4_0_, userdevice0_.os as os7_4_0_, userdevice0_.update_date as update_d8_4_0_ from user_device userdevice0_ where userdevice0_.account_idx=?
+04:50 DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4a734c04]
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : appVersion
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : createDate
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : deviceArn
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : deviceId
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : deviceToken
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : os
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : updateDate
+04:50 DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+04:50 DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+04:50 DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=com.bemily.domain.model.mysql.UserDevice)
+    - Returns
+       - EntityReturnImpl(entity=com.bemily.domain.model.mysql.UserDevice, querySpaceUid=<gen:0>, path=com.bemily.domain.model.mysql.UserDevice)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.bemily.domain.model.mysql.UserDevice)
+          - SQL table alias mapping - userdevice0_
+          - alias suffix - 0_
+          - suffixed key columns - {account_1_4_0_}
+
+04:50 DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.bemily.domain.model.mysql.UserDevice [READ]: select userdevice0_.account_idx as account_1_4_0_, userdevice0_.app_version as app_vers2_4_0_, userdevice0_.create_date as create_d3_4_0_, userdevice0_.device_arn as device_a4_4_0_, userdevice0_.device_id as device_i5_4_0_, userdevice0_.device_token as device_t6_4_0_, userdevice0_.os as os7_4_0_, userdevice0_.update_date as update_d8_4_0_ from user_device userdevice0_ where userdevice0_.account_idx=?
+04:50 DEBUG org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity com.bemily.domain.model.mysql.UserDevice: select userdevice0_.account_idx as account_1_4_0_, userdevice0_.app_version as app_vers2_4_0_, userdevice0_.create_date as create_d3_4_0_, userdevice0_.device_arn as device_a4_4_0_, userdevice0_.device_id as device_i5_4_0_, userdevice0_.device_token as device_t6_4_0_, userdevice0_.os as os7_4_0_, userdevice0_.update_date as update_d8_4_0_ from user_device userdevice0_ where userdevice0_.account_idx=?
+04:50 DEBUG org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity com.bemily.domain.model.mysql.UserDevice: select userdevice0_.account_idx as account_1_4_0_, userdevice0_.app_version as app_vers2_4_0_, userdevice0_.create_date as create_d3_4_0_, userdevice0_.device_arn as device_a4_4_0_, userdevice0_.device_id as device_i5_4_0_, userdevice0_.device_token as device_t6_4_0_, userdevice0_.os as os7_4_0_, userdevice0_.update_date as update_d8_4_0_ from user_device userdevice0_ where userdevice0_.account_idx=?
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister - Static SQL for entity: com.bemily.domain.model.mysql.MsgAnnouncement
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Version select: select idx from msg_announcement where idx =?
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Snapshot select: select msgannounc_.idx, msgannounc_.create_time as create_t2_2_, msgannounc_.msg_idx as msg_idx3_2_, msgannounc_.sender_idx as sender_i4_2_, msgannounc_.target_idx as target_i5_2_, msgannounc_.target_type as target_t6_2_ from msg_announcement msgannounc_ where msgannounc_.idx=?
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Insert 0: insert into msg_announcement (create_time, msg_idx, sender_idx, target_idx, target_type, idx) values (?, ?, ?, ?, ?, ?)
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Update 0: update msg_announcement set create_time=?, msg_idx=?, sender_idx=?, target_idx=?, target_type=? where idx=?
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Delete 0: delete from msg_announcement where idx=?
+04:50 DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@60f70249]
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : createTime
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : msgIdx
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : senderIdx
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : targetIdx
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : targetType
+04:50 DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+04:50 DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+04:50 DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=com.bemily.domain.model.mysql.MsgAnnouncement)
+    - Returns
+       - EntityReturnImpl(entity=com.bemily.domain.model.mysql.MsgAnnouncement, querySpaceUid=<gen:0>, path=com.bemily.domain.model.mysql.MsgAnnouncement)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.bemily.domain.model.mysql.MsgAnnouncement)
+          - SQL table alias mapping - msgannounc0_
+          - alias suffix - 0_
+          - suffixed key columns - {idx1_2_0_}
+
+04:50 DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.bemily.domain.model.mysql.MsgAnnouncement [NONE]: select msgannounc0_.idx as idx1_2_0_, msgannounc0_.create_time as create_t2_2_0_, msgannounc0_.msg_idx as msg_idx3_2_0_, msgannounc0_.sender_idx as sender_i4_2_0_, msgannounc0_.target_idx as target_i5_2_0_, msgannounc0_.target_type as target_t6_2_0_ from msg_announcement msgannounc0_ where msgannounc0_.idx=?
+04:50 DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@262816a8]
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : createTime
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : msgIdx
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : senderIdx
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : targetIdx
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : targetType
+04:50 DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+04:50 DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+04:50 DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=com.bemily.domain.model.mysql.MsgAnnouncement)
+    - Returns
+       - EntityReturnImpl(entity=com.bemily.domain.model.mysql.MsgAnnouncement, querySpaceUid=<gen:0>, path=com.bemily.domain.model.mysql.MsgAnnouncement)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.bemily.domain.model.mysql.MsgAnnouncement)
+          - SQL table alias mapping - msgannounc0_
+          - alias suffix - 0_
+          - suffixed key columns - {idx1_2_0_}
+
+04:50 DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.bemily.domain.model.mysql.MsgAnnouncement [READ]: select msgannounc0_.idx as idx1_2_0_, msgannounc0_.create_time as create_t2_2_0_, msgannounc0_.msg_idx as msg_idx3_2_0_, msgannounc0_.sender_idx as sender_i4_2_0_, msgannounc0_.target_idx as target_i5_2_0_, msgannounc0_.target_type as target_t6_2_0_ from msg_announcement msgannounc0_ where msgannounc0_.idx=?
+04:50 DEBUG org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity com.bemily.domain.model.mysql.MsgAnnouncement: select msgannounc0_.idx as idx1_2_0_, msgannounc0_.create_time as create_t2_2_0_, msgannounc0_.msg_idx as msg_idx3_2_0_, msgannounc0_.sender_idx as sender_i4_2_0_, msgannounc0_.target_idx as target_i5_2_0_, msgannounc0_.target_type as target_t6_2_0_ from msg_announcement msgannounc0_ where msgannounc0_.idx=?
+04:50 DEBUG org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity com.bemily.domain.model.mysql.MsgAnnouncement: select msgannounc0_.idx as idx1_2_0_, msgannounc0_.create_time as create_t2_2_0_, msgannounc0_.msg_idx as msg_idx3_2_0_, msgannounc0_.sender_idx as sender_i4_2_0_, msgannounc0_.target_idx as target_i5_2_0_, msgannounc0_.target_type as target_t6_2_0_ from msg_announcement msgannounc0_ where msgannounc0_.idx=?
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister - Static SQL for entity: com.bemily.domain.model.mysql.TimeMsg
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Version select: select idx from time_msg where idx =?
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Snapshot select: select timemsg_.idx, timemsg_.create_time as create_t2_3_, timemsg_.duration as duration3_3_, timemsg_.request_time as request_4_3_, timemsg_.sender_idx as sender_i5_3_, timemsg_.target_idx as target_i6_3_, timemsg_.target_type as target_t7_3_ from time_msg timemsg_ where timemsg_.idx=?
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Insert 0: insert into time_msg (create_time, duration, request_time, sender_idx, target_idx, target_type, idx) values (?, ?, ?, ?, ?, ?, ?)
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Update 0: update time_msg set create_time=?, duration=?, request_time=?, sender_idx=?, target_idx=?, target_type=? where idx=?
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Delete 0: delete from time_msg where idx=?
+04:50 DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@46c269e0]
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : createTime
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : duration
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : requestTime
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : senderIdx
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : targetIdx
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : targetType
+04:50 DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+04:50 DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+04:50 DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=com.bemily.domain.model.mysql.TimeMsg)
+    - Returns
+       - EntityReturnImpl(entity=com.bemily.domain.model.mysql.TimeMsg, querySpaceUid=<gen:0>, path=com.bemily.domain.model.mysql.TimeMsg)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.bemily.domain.model.mysql.TimeMsg)
+          - SQL table alias mapping - timemsg0_
+          - alias suffix - 0_
+          - suffixed key columns - {idx1_3_0_}
+
+04:50 DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.bemily.domain.model.mysql.TimeMsg [NONE]: select timemsg0_.idx as idx1_3_0_, timemsg0_.create_time as create_t2_3_0_, timemsg0_.duration as duration3_3_0_, timemsg0_.request_time as request_4_3_0_, timemsg0_.sender_idx as sender_i5_3_0_, timemsg0_.target_idx as target_i6_3_0_, timemsg0_.target_type as target_t7_3_0_ from time_msg timemsg0_ where timemsg0_.idx=?
+04:50 DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6069dd38]
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : createTime
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : duration
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : requestTime
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : senderIdx
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : targetIdx
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : targetType
+04:50 DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+04:50 DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+04:50 DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=com.bemily.domain.model.mysql.TimeMsg)
+    - Returns
+       - EntityReturnImpl(entity=com.bemily.domain.model.mysql.TimeMsg, querySpaceUid=<gen:0>, path=com.bemily.domain.model.mysql.TimeMsg)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.bemily.domain.model.mysql.TimeMsg)
+          - SQL table alias mapping - timemsg0_
+          - alias suffix - 0_
+          - suffixed key columns - {idx1_3_0_}
+
+04:50 DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.bemily.domain.model.mysql.TimeMsg [READ]: select timemsg0_.idx as idx1_3_0_, timemsg0_.create_time as create_t2_3_0_, timemsg0_.duration as duration3_3_0_, timemsg0_.request_time as request_4_3_0_, timemsg0_.sender_idx as sender_i5_3_0_, timemsg0_.target_idx as target_i6_3_0_, timemsg0_.target_type as target_t7_3_0_ from time_msg timemsg0_ where timemsg0_.idx=?
+04:50 DEBUG org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity com.bemily.domain.model.mysql.TimeMsg: select timemsg0_.idx as idx1_3_0_, timemsg0_.create_time as create_t2_3_0_, timemsg0_.duration as duration3_3_0_, timemsg0_.request_time as request_4_3_0_, timemsg0_.sender_idx as sender_i5_3_0_, timemsg0_.target_idx as target_i6_3_0_, timemsg0_.target_type as target_t7_3_0_ from time_msg timemsg0_ where timemsg0_.idx=?
+04:50 DEBUG org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity com.bemily.domain.model.mysql.TimeMsg: select timemsg0_.idx as idx1_3_0_, timemsg0_.create_time as create_t2_3_0_, timemsg0_.duration as duration3_3_0_, timemsg0_.request_time as request_4_3_0_, timemsg0_.sender_idx as sender_i5_3_0_, timemsg0_.target_idx as target_i6_3_0_, timemsg0_.target_type as target_t7_3_0_ from time_msg timemsg0_ where timemsg0_.idx=?
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister - Static SQL for entity: com.bemily.domain.model.account.Account
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Version select: select account_idx from account where account_idx =?
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Snapshot select: select account_.account_idx, account_.email as email2_0_, account_.password as password3_0_, account_.status as status4_0_ from account account_ where account_.account_idx=?
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Insert 0: insert into account (email, password, status, account_idx) values (?, ?, ?, ?)
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Update 0: update account set email=?, password=?, status=? where account_idx=?
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Delete 0: delete from account where account_idx=?
+04:50 DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@558756be]
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : email
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : password
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : status
+04:50 DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+04:50 DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+04:50 DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=com.bemily.domain.model.account.Account)
+    - Returns
+       - EntityReturnImpl(entity=com.bemily.domain.model.account.Account, querySpaceUid=<gen:0>, path=com.bemily.domain.model.account.Account)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.bemily.domain.model.account.Account)
+          - SQL table alias mapping - account0_
+          - alias suffix - 0_
+          - suffixed key columns - {account_1_0_0_}
+
+04:50 DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.bemily.domain.model.account.Account [NONE]: select account0_.account_idx as account_1_0_0_, account0_.email as email2_0_0_, account0_.password as password3_0_0_, account0_.status as status4_0_0_ from account account0_ where account0_.account_idx=?
+04:50 DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6d1dcdff]
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : email
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : password
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : status
+04:50 DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+04:50 DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+04:50 DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=com.bemily.domain.model.account.Account)
+    - Returns
+       - EntityReturnImpl(entity=com.bemily.domain.model.account.Account, querySpaceUid=<gen:0>, path=com.bemily.domain.model.account.Account)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.bemily.domain.model.account.Account)
+          - SQL table alias mapping - account0_
+          - alias suffix - 0_
+          - suffixed key columns - {account_1_0_0_}
+
+04:50 DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.bemily.domain.model.account.Account [READ]: select account0_.account_idx as account_1_0_0_, account0_.email as email2_0_0_, account0_.password as password3_0_0_, account0_.status as status4_0_0_ from account account0_ where account0_.account_idx=?
+04:50 DEBUG org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity com.bemily.domain.model.account.Account: select account0_.account_idx as account_1_0_0_, account0_.email as email2_0_0_, account0_.password as password3_0_0_, account0_.status as status4_0_0_ from account account0_ where account0_.account_idx=?
+04:50 DEBUG org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity com.bemily.domain.model.account.Account: select account0_.account_idx as account_1_0_0_, account0_.email as email2_0_0_, account0_.password as password3_0_0_, account0_.status as status4_0_0_ from account account0_ where account0_.account_idx=?
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister - Static SQL for entity: com.bemily.domain.model.mysql.DeletedMsgsLists
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Version select: select idx from deleted_msgs_lists where idx =?
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Snapshot select: select deletedmsg_.idx, deletedmsg_.create_time as create_t2_1_, deletedmsg_.del_all as del_all3_1_, deletedmsg_.end_pos as end_pos4_1_, deletedmsg_.msg_idx as msg_idx5_1_, deletedmsg_.sender_idx as sender_i6_1_, deletedmsg_.target_idx as target_i7_1_, deletedmsg_.target_type as target_t8_1_ from deleted_msgs_lists deletedmsg_ where deletedmsg_.idx=?
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Insert 0: insert into deleted_msgs_lists (create_time, del_all, end_pos, msg_idx, sender_idx, target_idx, target_type, idx) values (?, ?, ?, ?, ?, ?, ?, ?)
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Update 0: update deleted_msgs_lists set create_time=?, del_all=?, end_pos=?, msg_idx=?, sender_idx=?, target_idx=?, target_type=? where idx=?
+04:50 DEBUG o.h.p.entity.AbstractEntityPersister -  Delete 0: delete from deleted_msgs_lists where idx=?
+04:50 DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7ff35a3f]
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : createTime
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : delAll
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : endPos
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : msgIdx
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : senderIdx
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : targetIdx
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : targetType
+04:50 DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+04:50 DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+04:50 DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=com.bemily.domain.model.mysql.DeletedMsgsLists)
+    - Returns
+       - EntityReturnImpl(entity=com.bemily.domain.model.mysql.DeletedMsgsLists, querySpaceUid=<gen:0>, path=com.bemily.domain.model.mysql.DeletedMsgsLists)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.bemily.domain.model.mysql.DeletedMsgsLists)
+          - SQL table alias mapping - deletedmsg0_
+          - alias suffix - 0_
+          - suffixed key columns - {idx1_1_0_}
+
+04:50 DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.bemily.domain.model.mysql.DeletedMsgsLists [NONE]: select deletedmsg0_.idx as idx1_1_0_, deletedmsg0_.create_time as create_t2_1_0_, deletedmsg0_.del_all as del_all3_1_0_, deletedmsg0_.end_pos as end_pos4_1_0_, deletedmsg0_.msg_idx as msg_idx5_1_0_, deletedmsg0_.sender_idx as sender_i6_1_0_, deletedmsg0_.target_idx as target_i7_1_0_, deletedmsg0_.target_type as target_t8_1_0_ from deleted_msgs_lists deletedmsg0_ where deletedmsg0_.idx=?
+04:50 DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@252dc8c4]
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : createTime
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : delAll
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : endPos
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : msgIdx
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : senderIdx
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : targetIdx
+04:50 DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : targetType
+04:50 DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+04:50 DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+04:50 DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=com.bemily.domain.model.mysql.DeletedMsgsLists)
+    - Returns
+       - EntityReturnImpl(entity=com.bemily.domain.model.mysql.DeletedMsgsLists, querySpaceUid=<gen:0>, path=com.bemily.domain.model.mysql.DeletedMsgsLists)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.bemily.domain.model.mysql.DeletedMsgsLists)
+          - SQL table alias mapping - deletedmsg0_
+          - alias suffix - 0_
+          - suffixed key columns - {idx1_1_0_}
+
+04:50 DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.bemily.domain.model.mysql.DeletedMsgsLists [READ]: select deletedmsg0_.idx as idx1_1_0_, deletedmsg0_.create_time as create_t2_1_0_, deletedmsg0_.del_all as del_all3_1_0_, deletedmsg0_.end_pos as end_pos4_1_0_, deletedmsg0_.msg_idx as msg_idx5_1_0_, deletedmsg0_.sender_idx as sender_i6_1_0_, deletedmsg0_.target_idx as target_i7_1_0_, deletedmsg0_.target_type as target_t8_1_0_ from deleted_msgs_lists deletedmsg0_ where deletedmsg0_.idx=?
+04:50 DEBUG org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity com.bemily.domain.model.mysql.DeletedMsgsLists: select deletedmsg0_.idx as idx1_1_0_, deletedmsg0_.create_time as create_t2_1_0_, deletedmsg0_.del_all as del_all3_1_0_, deletedmsg0_.end_pos as end_pos4_1_0_, deletedmsg0_.msg_idx as msg_idx5_1_0_, deletedmsg0_.sender_idx as sender_i6_1_0_, deletedmsg0_.target_idx as target_i7_1_0_, deletedmsg0_.target_type as target_t8_1_0_ from deleted_msgs_lists deletedmsg0_ where deletedmsg0_.idx=?
+04:50 DEBUG org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity com.bemily.domain.model.mysql.DeletedMsgsLists: select deletedmsg0_.idx as idx1_1_0_, deletedmsg0_.create_time as create_t2_1_0_, deletedmsg0_.del_all as del_all3_1_0_, deletedmsg0_.end_pos as end_pos4_1_0_, deletedmsg0_.msg_idx as msg_idx5_1_0_, deletedmsg0_.sender_idx as sender_i6_1_0_, deletedmsg0_.target_idx as target_i7_1_0_, deletedmsg0_.target_type as target_t8_1_0_ from deleted_msgs_lists deletedmsg0_ where deletedmsg0_.idx=?
+04:50 DEBUG org.hibernate.mapping.Table - No alter strings for table : account
+04:50 DEBUG org.hibernate.mapping.Table - No alter strings for table : deleted_msgs_lists
+04:50 DEBUG org.hibernate.mapping.Table - No alter strings for table : hibernate_sequence
+04:50 DEBUG org.hibernate.mapping.Table - No alter strings for table : msg_announcement
+04:50 DEBUG org.hibernate.mapping.Table - No alter strings for table : time_msg
+04:50 DEBUG org.hibernate.mapping.Table - No alter strings for table : user_device
+04:50 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+04:50 DEBUG o.h.query.spi.NamedQueryRepository - Checking 0 named HQL queries
+04:50 DEBUG o.h.query.spi.NamedQueryRepository - Checking 0 named SQL queries
+04:50 DEBUG o.h.internal.SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@59cda16e
+04:50 DEBUG o.h.internal.SessionFactoryRegistry - Registering SessionFactory: d028fa50-a385-47bc-82cb-7213ab5bfd24 (<unnamed>)
+04:50 DEBUG o.h.internal.SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
+04:50 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+04:50 INFO  com.datastax.driver.core - DataStax Java driver 3.7.2 for Apache Cassandra
+04:50 INFO  c.d.driver.core.GuavaCompatibility - Detected Guava >= 19 in the classpath, using modern compatibility layer
+04:50 DEBUG c.d.driver.core.SystemProperties - com.datastax.driver.NEW_NODE_DELAY_SECONDS is undefined, using default value 1
+04:50 DEBUG c.d.driver.core.SystemProperties - com.datastax.driver.NOTIF_LOCK_TIMEOUT_SECONDS is undefined, using default value 60
+04:50 DEBUG c.d.driver.core.SystemProperties - com.datastax.driver.USE_NATIVE_CLOCK is undefined, using default value true
+04:50 INFO  c.datastax.driver.core.ClockFactory - Using native clock to generate timestamps.
+04:50 DEBUG c.d.driver.core.SystemProperties - com.datastax.driver.NON_BLOCKING_EXECUTOR_SIZE is undefined, using default value 1
+04:50 DEBUG com.datastax.driver.core.Cluster - Starting new cluster with contact points [/10.1.0.12:9042]
+04:50 DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+04:50 DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+04:50 DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+04:50 DEBUG i.n.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+04:50 DEBUG i.n.util.internal.PlatformDependent0 - Java version: 14
+04:50 DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+04:50 DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+04:50 DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+04:50 DEBUG i.n.util.internal.PlatformDependent0 - direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:233)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:312)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:227)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:289)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:48)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:84)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:65)
+	at com.datastax.driver.core.Connection$Factory.<init>(Connection.java:909)
+	at com.datastax.driver.core.Cluster$Manager.init(Cluster.java:1499)
+	at com.datastax.driver.core.Cluster.init(Cluster.java:208)
+	at com.datastax.driver.core.Cluster.connectAsync(Cluster.java:376)
+	at com.datastax.driver.core.Cluster.connect(Cluster.java:332)
+	at org.springframework.data.cassandra.config.CassandraCqlSessionFactoryBean.connect(CassandraCqlSessionFactoryBean.java:90)
+	at org.springframework.data.cassandra.config.CassandraCqlSessionFactoryBean.afterPropertiesSet(CassandraCqlSessionFactoryBean.java:82)
+	at org.springframework.data.cassandra.config.CassandraSessionFactoryBean.afterPropertiesSet(CassandraSessionFactoryBean.java:59)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1304)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1699)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1444)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1304)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1304)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1304)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:408)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:454)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:239)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:893)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.bemily.BemilyProxyApplication.main(BemilyProxyApplication.java:23)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52)
+04:50 DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+04:50 DEBUG i.n.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @1f2f9244
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:376)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:647)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:556)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:347)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:312)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:338)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:289)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:48)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:84)
+	at io.netty.channel.group.DefaultChannelGroup.<init>(DefaultChannelGroup.java:65)
+	at com.datastax.driver.core.Connection$Factory.<init>(Connection.java:909)
+	at com.datastax.driver.core.Cluster$Manager.init(Cluster.java:1499)
+	at com.datastax.driver.core.Cluster.init(Cluster.java:208)
+	at com.datastax.driver.core.Cluster.connectAsync(Cluster.java:376)
+	at com.datastax.driver.core.Cluster.connect(Cluster.java:332)
+	at org.springframework.data.cassandra.config.CassandraCqlSessionFactoryBean.connect(CassandraCqlSessionFactoryBean.java:90)
+	at org.springframework.data.cassandra.config.CassandraCqlSessionFactoryBean.afterPropertiesSet(CassandraCqlSessionFactoryBean.java:82)
+	at org.springframework.data.cassandra.config.CassandraSessionFactoryBean.afterPropertiesSet(CassandraSessionFactoryBean.java:59)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1304)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1699)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1444)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1304)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1304)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1304)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:408)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:454)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:239)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:893)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.bemily.BemilyProxyApplication.main(BemilyProxyApplication.java:23)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52)
+04:50 DEBUG i.n.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+04:50 DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: available
+04:50 DEBUG i.n.util.internal.PlatformDependent - maxDirectMemory: 506855424 bytes (maybe)
+04:50 DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+04:50 DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+04:50 DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+04:50 DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+04:50 DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+04:50 DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+04:50 DEBUG c.d.driver.core.SystemProperties - com.datastax.driver.FORCE_NIO is undefined, using default value false
+04:50 INFO  com.datastax.driver.core.NettyUtil - Did not find Netty's native epoll transport in the classpath, defaulting to NIO.
+04:50 DEBUG i.n.c.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 2
+04:50 DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+04:50 DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+04:50 DEBUG i.n.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+04:50 DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+04:50 DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+04:50 DEBUG i.n.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@31a2a9fa
+04:50 DEBUG c.d.driver.core.SystemProperties - com.datastax.driver.EXTENDED_PEER_CHECK is undefined, using default value true
+04:50 DEBUG com.datastax.driver.core.Host.STATES - [/10.1.0.12:9042] preparing to open 1 new connections, total = 1
+04:50 DEBUG c.d.driver.core.SystemProperties - com.datastax.driver.DISABLE_COALESCING is undefined, using default value false
+04:50 DEBUG c.d.driver.core.SystemProperties - com.datastax.driver.FLUSHER_SCHEDULE_PERIOD_NS is undefined, using default value 10000
+04:50 DEBUG c.d.driver.core.SystemProperties - com.datastax.driver.FLUSHER_RUN_WITHOUT_WORK_TIMES is undefined, using default value 5
+04:50 DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 2
+04:50 DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 2
+04:50 DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+04:50 DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 11
+04:50 DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 16777216
+04:50 DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.tinyCacheSize: 512
+04:50 DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+04:50 DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+04:50 DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+04:50 DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+04:50 DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+04:50 DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: true
+04:50 DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+04:50 DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 6 (auto-detected)
+04:50 DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+04:50 DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+04:50 DEBUG io.netty.util.NetUtil - Loopback interface: lo (lo, 127.0.0.1)
+04:50 DEBUG io.netty.util.NetUtil - /proc/sys/net/core/somaxconn: 128
+04:50 DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: ea:bc:7c:ff:fe:0c:cc:cd (auto-detected)
+04:50 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+04:50 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+04:50 DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+04:50 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.12:9042-1, inFlight=0, closed=false] Connection established, initializing transport
+04:50 DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+04:50 DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+04:50 DEBUG io.netty.util.Recycler - -Dio.netty.recycler.linkCapacity: 16
+04:50 DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+04:50 DEBUG io.netty.util.Recycler - -Dio.netty.recycler.delayedQueue.ratio: 8
+04:50 DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+04:50 DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+04:50 DEBUG i.n.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3f88ae4a
+04:50 DEBUG c.d.driver.core.SystemProperties - com.datastax.driver.NATIVE_TRANSPORT_MAX_FRAME_SIZE_IN_MB is undefined, using default value 256
+04:50 DEBUG com.datastax.driver.core.Host.STATES - [/10.1.0.12:9042] Connection[/10.1.0.12:9042-1, inFlight=0, closed=false] Transport initialized, connection ready
+04:50 DEBUG c.d.driver.core.ControlConnection - [Control connection] Refreshing node list and token map
+04:50 DEBUG c.d.driver.core.ControlConnection - [Control connection] Refreshing schema
+04:50 DEBUG com.datastax.driver.core.Host.STATES - [Control connection] established to /10.1.0.12:9042
+04:50 INFO  c.d.d.c.p.DCAwareRoundRobinPolicy - Using data-center name 'ap-northeast-2' for DCAwareRoundRobinPolicy (if this is incorrect, please provide the correct datacenter name with DCAwareRoundRobinPolicy constructor)
+04:50 INFO  com.datastax.driver.core.Cluster - New Cassandra host /10.1.0.27:9042 added
+04:50 INFO  com.datastax.driver.core.Cluster - New Cassandra host /10.1.0.12:9042 added
+04:50 INFO  com.datastax.driver.core.Cluster - New Cassandra host /10.1.0.156:9042 added
+04:50 DEBUG c.d.driver.core.SystemProperties - com.datastax.driver.CHECK_IO_DEADLOCKS is undefined, using default value true
+04:50 DEBUG com.datastax.driver.core.Host.STATES - [/10.1.0.27:9042] preparing to open 1 new connections, total = 1
+04:50 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.27:9042-1, inFlight=0, closed=false] Connection established, initializing transport
+04:50 DEBUG com.datastax.driver.core.Host.STATES - [/10.1.0.27:9042] Connection[/10.1.0.27:9042-1, inFlight=0, closed=false] Transport initialized, connection ready
+04:50 DEBUG c.d.driver.core.HostConnectionPool - Created connection pool to host /10.1.0.27:9042 (1 connections needed, 1 successfully opened)
+04:50 DEBUG com.datastax.driver.core.Session - Added connection pool for /10.1.0.27:9042
+04:50 DEBUG com.datastax.driver.core.Host.STATES - [/10.1.0.12:9042] preparing to open 1 new connections, total = 2
+04:50 DEBUG com.datastax.driver.core.Host.STATES - [/10.1.0.156:9042] preparing to open 1 new connections, total = 1
+04:50 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.12:9042-2, inFlight=0, closed=false] Connection established, initializing transport
+04:50 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.156:9042-1, inFlight=0, closed=false] Connection established, initializing transport
+04:50 DEBUG com.datastax.driver.core.Host.STATES - [/10.1.0.12:9042] Connection[/10.1.0.12:9042-2, inFlight=0, closed=false] Transport initialized, connection ready
+04:50 DEBUG c.d.driver.core.HostConnectionPool - Created connection pool to host /10.1.0.12:9042 (1 connections needed, 1 successfully opened)
+04:50 DEBUG com.datastax.driver.core.Session - Added connection pool for /10.1.0.12:9042
+04:50 DEBUG com.datastax.driver.core.Host.STATES - [/10.1.0.156:9042] Connection[/10.1.0.156:9042-1, inFlight=0, closed=false] Transport initialized, connection ready
+04:50 DEBUG c.d.driver.core.HostConnectionPool - Created connection pool to host /10.1.0.156:9042 (1 connections needed, 1 successfully opened)
+04:50 DEBUG com.datastax.driver.core.Session - Added connection pool for /10.1.0.156:9042
+04:50 DEBUG o.h.s.internal.StatisticsInitiator - Statistics initialized [enabled=false]
+04:50 DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+04:50 DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+04:50 DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+04:50 DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+04:50 DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+04:50 DEBUG com.amazonaws.AmazonWebServiceClient - Internal logging successfully configured to commons logger: true
+04:50 DEBUG c.a.m.CsmConfigurationProviderChain - Unable to load configuration from com.amazonaws.monitoring.EnvironmentVariableCsmConfigurationProvider@31b0f02: Unable to load Client Side Monitoring configurations from environment variables!
+04:50 DEBUG c.a.m.CsmConfigurationProviderChain - Unable to load configuration from com.amazonaws.monitoring.SystemPropertyCsmConfigurationProvider@19ae2ee5: Unable to load Client Side Monitoring configurations from system properties variables!
+04:50 DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Closing connections idle longer than 60000 MILLISECONDS
+04:50 DEBUG c.a.m.CsmConfigurationProviderChain - Unable to load configuration from com.amazonaws.monitoring.ProfileCsmConfigurationProvider@74c9e11: Unable to load config file
+04:50 INFO  c.b.d.c.security.SecurityConfig - create
+04:50 INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: e014ff04-f2e4-495e-9884-5efcfc69249b
+
+04:50 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a2bf50f, org.springframework.security.web.context.SecurityContextPersistenceFilter@4b7ed03e, org.springframework.security.web.header.HeaderWriterFilter@11e9ac24, org.springframework.security.web.authentication.logout.LogoutFilter@6629643d, com.bemily.domain.configuration.security.JwtAuthorizationFilter@350323a0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f91fbda, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@bbb6f0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2506b881, org.springframework.security.web.session.SessionManagementFilter@37c7766e, org.springframework.security.web.access.ExceptionTranslationFilter@5a592c70, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7b9088f2]
+04:50 DEBUG o.h.v.i.e.r.TraversableResolvers - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+04:50 DEBUG o.h.v.i.e.r.TraversableResolvers - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+04:50 DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+04:50 DEBUG o.h.v.i.e.r.TraversableResolvers - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+04:50 DEBUG o.h.v.i.e.r.TraversableResolvers - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+04:50 DEBUG o.h.v.i.engine.ConfigurationImpl - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+04:50 DEBUG o.h.v.i.engine.ConfigurationImpl - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+04:50 DEBUG o.h.v.i.engine.ConfigurationImpl - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+04:50 DEBUG o.h.v.i.x.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+04:50 DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via user class loader
+04:50 DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+04:50 DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+04:50 DEBUG o.h.v.i.x.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+04:50 DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+04:50 DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+04:50 DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+04:50 DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+04:50 DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+04:50 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+04:50 DEBUG i.l.c.r.DefaultClientResources - -Dio.netty.eventLoopThreads: 3
+04:50 DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Creating executor io.netty.util.concurrent.DefaultEventExecutorGroup
+04:50 DEBUG reactor.util.Loggers$LoggerFactory - Using Slf4j logging framework
+04:50 DEBUG i.l.c.r.DefaultClientResources - LatencyUtils/HdrUtils are not available, metrics are disabled
+04:50 DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+04:50 DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+04:50 INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+04:50 INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+04:50 INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application.errorChannel' has 1 subscriber(s).
+04:50 INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+04:50 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+04:50 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+04:50 INFO  com.bemily.BemilyProxyApplication - Started BemilyProxyApplication in 43.513 seconds (JVM running for 46.567)
+04:50 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+04:50 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+04:50 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 217 ms
+04:50 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+04:50 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+04:50 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.12:9042-1, inFlight=0, closed=false] was inactive for 30 seconds, sending heartbeat
+04:50 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.12:9042-1, inFlight=0, closed=false] heartbeat query succeeded
+04:50 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.27:9042-1, inFlight=0, closed=false] was inactive for 30 seconds, sending heartbeat
+04:50 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.27:9042-1, inFlight=0, closed=false] heartbeat query succeeded
+04:50 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.156:9042-1, inFlight=0, closed=false] was inactive for 30 seconds, sending heartbeat
+04:50 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.156:9042-1, inFlight=0, closed=false] heartbeat query succeeded
+04:50 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.12:9042-2, inFlight=0, closed=false] was inactive for 30 seconds, sending heartbeat
+04:50 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.12:9042-2, inFlight=0, closed=false] heartbeat query succeeded
+04:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+04:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+04:51 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.12:9042-1, inFlight=0, closed=false] was inactive for 30 seconds, sending heartbeat
+04:51 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.12:9042-1, inFlight=0, closed=false] heartbeat query succeeded
+04:51 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.27:9042-1, inFlight=0, closed=false] was inactive for 30 seconds, sending heartbeat
+04:51 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.27:9042-1, inFlight=0, closed=false] heartbeat query succeeded
+04:51 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.156:9042-1, inFlight=0, closed=false] was inactive for 30 seconds, sending heartbeat
+04:51 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.156:9042-1, inFlight=0, closed=false] heartbeat query succeeded
+04:51 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.12:9042-2, inFlight=0, closed=false] was inactive for 30 seconds, sending heartbeat
+04:51 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.12:9042-2, inFlight=0, closed=false] heartbeat query succeeded
+04:51 DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Closing connections idle longer than 60000 MILLISECONDS
+04:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+04:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+04:51 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.12:9042-1, inFlight=0, closed=false] was inactive for 30 seconds, sending heartbeat
+04:51 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.12:9042-1, inFlight=0, closed=false] heartbeat query succeeded
+04:51 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.27:9042-1, inFlight=0, closed=false] was inactive for 30 seconds, sending heartbeat
+04:51 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.27:9042-1, inFlight=0, closed=false] heartbeat query succeeded
+04:51 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.156:9042-1, inFlight=0, closed=false] was inactive for 30 seconds, sending heartbeat
+04:51 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.156:9042-1, inFlight=0, closed=false] heartbeat query succeeded
+04:51 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.12:9042-2, inFlight=0, closed=false] was inactive for 30 seconds, sending heartbeat
+04:51 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.12:9042-2, inFlight=0, closed=false] heartbeat query succeeded
+04:52 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+04:52 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+04:52 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.12:9042-1, inFlight=0, closed=false] was inactive for 30 seconds, sending heartbeat
+04:52 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.12:9042-1, inFlight=0, closed=false] heartbeat query succeeded
+04:52 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.27:9042-1, inFlight=0, closed=false] was inactive for 30 seconds, sending heartbeat
+04:52 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.27:9042-1, inFlight=0, closed=false] heartbeat query succeeded
+04:52 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.156:9042-1, inFlight=0, closed=false] was inactive for 30 seconds, sending heartbeat
+04:52 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.156:9042-1, inFlight=0, closed=false] heartbeat query succeeded
+04:52 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.12:9042-2, inFlight=0, closed=false] was inactive for 30 seconds, sending heartbeat
+04:52 DEBUG com.datastax.driver.core.Connection - Connection[/10.1.0.12:9042-2, inFlight=0, closed=false] heartbeat query succeeded

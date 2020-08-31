@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bemily-file
+  labels:
+    node_tag: file
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      node_tag: file
+  template:
+    metadata:
+      labels:
+        node_tag: file
+    spec:
+      containers:
+        - name: bemily-file
+          image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/bemily-file
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 38080
+          resources:
+            requests:
+              memory: "1500Mi"
+              cpu: "500m"
+            limits:
+              memory: "2000Mi"
+              cpu: "500m"
+      nodeSelector:
+        node_tag: file
