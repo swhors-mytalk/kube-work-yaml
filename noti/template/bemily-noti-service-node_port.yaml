@@ -8,7 +8,7 @@ spec:
   type: NodePort
   selector:
     node_tag: noti
-    color: green
+    color: blue
   ports:
     - name: bemily-noti
       port: 8080

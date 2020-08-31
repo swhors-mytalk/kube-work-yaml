@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bemily-noti-green
+  name: bemily-noti-blue
   labels:
     node_tag: noti
-    color: green
+    color: blue
 spec:
   replicas: 2
   selector:
     matchLabels:
       node_tag: noti
-      color: green
+      color: blue
   template:
     metadata:
       labels:
         node_tag: noti
-        color: green
+        color: blue
     spec:
       containers:
-        - name: noti
+        - name: bemily-noti
           image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/bemily-noti:latest
           imagePullPolicy: Always
           ports:
@@ -44,7 +44,7 @@ spec:
   type: NodePort
   selector:
     node_tag: noti
-    color: green
+    color: blue
   ports:
     - name: bemily-noti
       port: 8080
@@ -59,7 +59,7 @@ metadata:
   name: bemily-noti
   labels:
     node_tag: noti
-    color : green
+    color : blue
 spec:
   maxReplicas: 4
   minReplicas: 2
