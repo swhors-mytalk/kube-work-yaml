@@ -90,7 +90,7 @@ if [ "$ENABLED" -eq 1 ]; then
   kubectl apply -f $SVC_DEP_FILE
   sleep 5
   kubectl delete deploy "${SVC_NAME}""-""${COLOR}"
-  sleep 10
+  sleep 20
   echo "completed to depoly from ""${COLOR}"" to ""${NEXT_COLOR}"
   echo ""
   echo ""
