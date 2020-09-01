@@ -1,14 +1,15 @@
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: bemily-noti
+  name: bemily-api
   labels:
-    node_tag: noti
+    node_tag: api
+    color: blue
 spec:
-  maxReplicas: 4
+  maxReplicas: 6
   minReplicas: 2
   scaleTargetRef:
     apiVersion: extensions/v1beta1
     kind: Deployment
-    name: bemily-noti
+    name: bemily-api
   targetCPUUtilizationPercentage: 30
