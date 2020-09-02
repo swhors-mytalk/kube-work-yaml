@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bemily-api
+  labels:
+    node_tag: api
+    color: blue
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      node_tag: api
+      color: blue
+  template:
+    metadata:
+      labels:
+        node_tag: api
+        color: blue
+    spec:
+      containers:
+        - name: bemily-api
+          image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/bemily_api:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 7000
+      nodeSelector:
+        node_tag: api
