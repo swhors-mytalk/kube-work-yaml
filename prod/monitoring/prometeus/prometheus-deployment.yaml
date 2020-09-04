@@ -14,7 +14,7 @@ spec:
         app: prometheus-server
     spec:
       nodeSelector:
-        node_tag: metric
+        node_tag: mon
       containers:
         - name: prometheus
           image: prom/prometheus:latest
