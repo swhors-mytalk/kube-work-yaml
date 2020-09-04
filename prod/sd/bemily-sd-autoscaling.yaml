@@ -5,10 +5,10 @@ metadata:
   labels:
     node_tag: sd
 spec:
-  maxReplicas: 6
-  minReplicas: 2
+  maxReplicas: 7
+  minReplicas: 4
   scaleTargetRef:
     apiVersion: extensions/v1beta1
     kind: Deployment
     name: bemily-sd
-  targetCPUUtilizationPercentage: 50
+  targetCPUUtilizationPercentage: 80
