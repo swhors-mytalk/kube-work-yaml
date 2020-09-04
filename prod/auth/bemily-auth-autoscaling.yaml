@@ -1,14 +1,14 @@
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: bemily-api
+  name: bemily-auth
   labels:
-    node_tag: api
+    node_tag: auth
 spec:
-  maxReplicas: 8
-  minReplicas: 4
+  maxReplicas: 4
+  minReplicas: 2
   scaleTargetRef:
     apiVersion: extensions/v1beta1
     kind: Deployment
-    name: bemily-api
+    name: bemily-auth
   targetCPUUtilizationPercentage: 80

@@ -1,14 +1,14 @@
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: bemily-api
+  name: bemily-file
   labels:
-    node_tag: api
+    node_tag: file
 spec:
   maxReplicas: 8
   minReplicas: 4
   scaleTargetRef:
     apiVersion: extensions/v1beta1
     kind: Deployment
-    name: bemily-api
+    name: bemily-file
   targetCPUUtilizationPercentage: 80
