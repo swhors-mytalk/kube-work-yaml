@@ -111,6 +111,10 @@ data:
           regex: (.+)
           target_label: __metrics_path__
           replacement: /api/v1/nodes/${1}/proxy/metrics/cadvisor
+      - job_name: 'cassandra'
+        static_configs:
+          - targets:
+            - 10.1.0.12:7070,10.1.0.27:7070,10.1.0.156:7070
       - job_name: 'kubernetes-service-endpoints'
         kubernetes_sd_configs:
         - role: endpoints
