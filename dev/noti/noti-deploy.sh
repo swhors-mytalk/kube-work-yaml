@@ -17,6 +17,30 @@ AUTOSCALE_FILE=template/bemily-noti-autoscaling.yaml
 FILES=($DEPLOY_FILE $SERVICE_FILE $AUTOSCALE_FILE)
 SVC_DEP_FILE="bemily-noti-svc-dep.yaml"
 
+function beginswith() { case $2 in "$1"*) true;; *) false;; esac; }
+
+function find_active_color {
+  find_line=`kubectl describe svc bemily-noti | grep -m1 'color'`
+  new_line=$(echo $find_line| cut -c11- | rev | cut -c1- | rev)
+
+  delimiter=","
+  items=$new_line$delimiter
+
+  itemarray=()
+  while [[ $items ]]; do
+          itemarray+=( "${items%%"$delimiter"*}")
+          items=${items#*"$delimiter"}
+  done
+
+  # shellcheck disable=SC2068
+  for item in ${itemarray[@]}
+  do
+    if beginswith "color=" "$item"; then
+      value=$(echo $item| cut -c7-)
+      echo $value
+    fi
+  done
+}
 
 function find_color {
   line0=$(grep -m1 'color' $SERVICE_FILE)
@@ -71,8 +95,8 @@ function create_service {
   fi
 }
 
-
-COLOR=$(find_color)
+#COLOR=$(find_color)
+COLOR=$(find_active_color)
 
 NEXT_COLOR=$(get_next_color ${COLOR})
 
