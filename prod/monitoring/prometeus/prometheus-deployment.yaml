@@ -33,7 +33,5 @@ spec:
           configMap:
             defaultMode: 420
             name: prometheus-server-conf
-
         - name: prometheus-storage-volume
-          awsElasticBlockStore:
-            volumeID: vol-0f6db7dd891b8a615
+          emptyDir: {}
