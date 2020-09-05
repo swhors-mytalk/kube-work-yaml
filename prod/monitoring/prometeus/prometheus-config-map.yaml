@@ -113,8 +113,11 @@ data:
           replacement: /api/v1/nodes/${1}/proxy/metrics/cadvisor
       - job_name: 'cassandra'
         static_configs:
-          - targets:
-            - ['10.2.3.114:7070','10.2.3.145:7070','10.2.3.236:7070','10.2.3.216:7070','10.2.3.111:7070']
+          - targets: ['10.2.3.114:7070']
+          - targets: ['10.2.3.145:7070']
+          - targets: ['10.2.3.236:7070']
+          - targets: ['10.2.3.216:7070']
+          - targets: ['10.2.3.111:7070']
       - job_name: 'kubernetes-service-endpoints'
         kubernetes_sd_configs:
         - role: endpoints
