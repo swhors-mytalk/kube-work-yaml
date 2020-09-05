@@ -35,4 +35,5 @@ spec:
             name: prometheus-server-conf
 
         - name: prometheus-storage-volume
-          emptyDir: {}
+          awsElasticBlockStore:
+            volumeID: vol-0f6db7dd891b8a615
