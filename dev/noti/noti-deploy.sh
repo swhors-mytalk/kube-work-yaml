@@ -17,7 +17,9 @@ AUTOSCALE_FILE=template/bemily-noti-autoscaling.yaml
 FILES=($DEPLOY_FILE $SERVICE_FILE $AUTOSCALE_FILE)
 SVC_DEP_FILE="bemily-noti-svc-dep.yaml"
 
-function beginswith() { case $2 in "$1"*) true;; *) false;; esac; }
+function beginswith() {
+  case $2 in "$1"*) true;; *) false;; esac;
+}
 
 function find_active_color {
   find_line=`kubectl describe svc bemily-noti | grep -m1 'color'`
@@ -95,7 +97,43 @@ function create_service {
   fi
 }
 
-#COLOR=$(find_color)
+
+function delete_confirm() {
+  echo "Delete previous zone? (yes/No)"
+  read answer
+
+  if [ "${answer}" == "yes" ]; then
+    echo 1
+  elif [ "${answer}" == "Yes" ]; then
+    echo 1
+  else
+    echo 0
+  fi
+}
+
+
+function deploy() {
+  echo "---------------------------"
+  echo "| Start to deploy         |"
+  echo "---------------------------"
+  echo ""
+  kubectl apply -f $1
+  echo "Wait 20 seconds......"
+  sleep 20
+  kubectl describe svc $2
+}
+
+
+function delete_previous_zone() {
+  sleep 5
+  kubectl delete deploy "$1""-""$2"
+  echo "completed to depoly from ""$2"" to ""$3"
+  echo ""
+  echo ""
+
+}
+
+
 COLOR=$(find_active_color)
 
 NEXT_COLOR=$(get_next_color ${COLOR})
@@ -105,19 +143,29 @@ echo "CURRENT =" $COLOR ",NEXT =" $NEXT_COLOR
 change_color ${COLOR} ${NEXT_COLOR}
 create_service
 
-
-if [ "$ENABLED" -eq 1 ]; then
-  echo "---------------------------"
-  echo "| Start to deploy         |"
-  echo "---------------------------"
-  echo ""
-  kubectl apply -f $SVC_DEP_FILE
-  sleep 5
-  kubectl delete deploy "${SVC_NAME}""-""${COLOR}"
-  sleep 10
-  echo "completed to depoly from ""${COLOR}"" to ""${NEXT_COLOR}"
-  echo ""
-  echo ""
-  kubectl describe svc ${SVC_NAME}
+if [ "$ENABLE_CHANGE" -eq 1 ]; then
+  deploy $SVC_DEP_FILE ${SVC_NAME}
 fi
+
+ENABLED_DELETE=`delete_confirm`
+
+echo "Delete previous zone? (yes/No)"
+read answer
+
+if [ "${answer}" == "yes" ]; then
+  ENABLED_DELETE=1
+elif [ "${answer}" == "Yes" ]; then
+  ENABLED_DELETE=1
+fi
+
+echo "Answer ="$ENABLED_DELETE
+
+if [ "$ENABLED_DELETE" -eq 1 ]; then
+  delete_previous_zone ${SVC_NAME} ${COLOR} ${NEXT_COLOR}
+fi
+
+echo "------------------------------"
+echo "completed to deploy"
+echo "------------------------------"
+
 
