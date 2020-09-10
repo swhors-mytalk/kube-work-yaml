@@ -39,7 +39,7 @@ spec:
             backend:
               serviceName: bemily-sd
               servicePort: 8080
-          - path: /api/file/*
+          - path: /file/manage/*
             backend:
               serviceName: bemily-file
               servicePort: 38080
