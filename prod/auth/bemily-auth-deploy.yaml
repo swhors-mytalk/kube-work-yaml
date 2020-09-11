@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bemily-auth
+  name: prod-bemily-auth
   labels:
     node_tag: auth
 spec:
@@ -15,7 +15,7 @@ spec:
         node_tag: auth
     spec:
       containers:
-        - name: bemily-auth
+        - name: prod-bemily-auth
           image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/auth-prod:latest
           imagePullPolicy: Always
           ports:

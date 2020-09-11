@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bemily-sd
+  name: prod-bemily-sd
   labels:
     node_tag: sd
 spec:
@@ -20,7 +20,7 @@ spec:
         node_tag: sd
     spec:
       containers:
-        - name: bemily-sd
+        - name: prod-bemily-sd
           image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/bemily-sd-prod:latest
           imagePullPolicy: Always
           ports:

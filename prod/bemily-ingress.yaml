@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: bemily
+  name: prod-bemily
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
@@ -19,11 +19,11 @@ spec:
         paths:
           - path: /sd/v1/msg/*
             backend:
-              serviceName: bemily-sd
+              serviceName: prod-bemily-sd
               servicePort: 8080
           - path: /sd/cas/hello
             backend:
-              serviceName: bemily-sd
+              serviceName: prod-bemily-sd
               servicePort: 8080
 
 
@@ -33,41 +33,41 @@ spec:
         paths:
           - path: /sd/v1/msg/*
             backend:
-              serviceName: bemily-sd
+              serviceName: prod-bemily-sd
               servicePort: 8080
           - path: /sd/cas/hello
             backend:
-              serviceName: bemily-sd
+              serviceName: prod-bemily-sd
               servicePort: 8080
           - path: /file/manage/*
             backend:
-              serviceName: bemily-file
+              serviceName: prod-bemily-file
               servicePort: 38080
           - path: /auth/*
             backend:
-              serviceName: bemily-auth
+              serviceName: prod-bemily-auth
               servicePort: 38081
           - path: /api/account/*
             backend:
-              serviceName: bemily-api
+              serviceName: prod-bemily-api
               servicePort: 7000
           - path: /api/friends/*
             backend:
-              serviceName: bemily-api
+              serviceName: prod-bemily-api
               servicePort: 7000
           - path: /api/group/*
             backend:
-              serviceName: bemily-api
+              serviceName: prod-bemily-api
               servicePort: 7000
           - path: /api/chat/*
             backend:
-              serviceName: bemily-api
+              serviceName: prod-bemily-api
               servicePort: 7000
           - path: /api/profile/*
             backend:
-              serviceName: bemily-api
+              serviceName: prod-bemily-api
               servicePort: 7000
           - path: /noti/v1/msg/*
             backend:
-              serviceName: bemily-noti
+              serviceName: prod-bemily-noti
               servicePort: 8080

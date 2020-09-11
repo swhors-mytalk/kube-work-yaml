@@ -1,7 +1,7 @@
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: bemily-noti
+  name: prod-bemily-noti
   labels:
     node_tag: noti
     color : green
@@ -11,5 +11,5 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: bemily-noti
+    name: prod-bemily-noti
   targetCPUUtilizationPercentage: 80

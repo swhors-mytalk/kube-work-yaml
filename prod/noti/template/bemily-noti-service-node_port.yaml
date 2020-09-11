@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: bemily-noti
+  name: prod-bemily-noti
   labels:
     node_tag: noti
 spec:
@@ -10,7 +10,7 @@ spec:
     node_tag: noti
     color: green
   ports:
-    - name: bemily-noti
+    - name: prod-bemily-noti
       port: 8080
       protocol: TCP
       nodePort: 30501

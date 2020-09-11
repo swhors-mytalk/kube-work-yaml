@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bemily-api
+  name: prod-bemily-api
   labels:
     node_tag: api
 spec:
@@ -15,7 +15,7 @@ spec:
         node_tag: api
     spec:
       containers:
-        - name: bemily-api
+        - name: prod-bemily-api
           image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/bemily_api-prod:latest
           imagePullPolicy: Always
           ports:

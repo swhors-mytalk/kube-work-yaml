@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: bemily-file
+  name: prod-bemily-file
   labels:
     node_tag: file
 spec:
@@ -9,7 +9,7 @@ spec:
   selector:
     node_tag: file
   ports:
-    - name: bemily-file
+    - name: prod-bemily-file
       port: 38080
       protocol: TCP
       targetPort: 38080

@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bemily-noti-green
+  name: prod-bemily-noti-green
   labels:
     node_tag: noti
     color: green
@@ -18,7 +18,7 @@ spec:
         color: green
     spec:
       containers:
-        - name: bemily-noti
+        - name: prod-bemily-noti
           image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/bemily-noti-prod:latest
           imagePullPolicy: Always
           ports:

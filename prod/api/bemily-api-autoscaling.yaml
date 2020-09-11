@@ -1,7 +1,7 @@
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: bemily-api
+  name: prod-bemily-api
   labels:
     node_tag: api
 spec:

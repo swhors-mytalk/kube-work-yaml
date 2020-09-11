@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: bemily-sd
+  name: prod-bemily-sd
   labels:
     node_tag: sd
 spec:
@@ -9,7 +9,7 @@ spec:
   selector:
     node_tag: sd
   ports:
-    - name: bemily-sd
+    - name: prod-bemily-sd
       port: 8080
       protocol: TCP
       nodePort: 30600

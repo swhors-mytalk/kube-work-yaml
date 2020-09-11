@@ -1,7 +1,7 @@
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: bemily-file
+  name: prod-bemily-file
   labels:
     node_tag: file
 spec:
@@ -10,5 +10,5 @@ spec:
   scaleTargetRef:
     apiVersion: extensions/v1beta1
     kind: Deployment
-    name: bemily-file
+    name: prod-bemily-file
   targetCPUUtilizationPercentage: 80
