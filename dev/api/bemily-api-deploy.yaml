@@ -4,18 +4,15 @@ metadata:
   name: bemily-api
   labels:
     node_tag: api
-    color: blue
 spec:
   replicas: 1
   selector:
     matchLabels:
       node_tag: api
-      color: blue
   template:
     metadata:
       labels:
         node_tag: api
-        color: blue
     spec:
       containers:
         - name: bemily-api
