@@ -5,12 +5,11 @@ metadata:
   labels:
     node_tag: bw
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     node_tag: bw
   ports:
     - name: bemily-bw
-      port: 38080
+      port: 8080
       protocol: TCP
       targetPort: 8080
-      nodePort: 30580
