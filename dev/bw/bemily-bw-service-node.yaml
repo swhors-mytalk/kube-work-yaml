@@ -4,6 +4,8 @@ metadata:
   name: bemily-bw
   labels:
     node_tag: bw
+  annotation:
+    service.beta.kubernetes.io/aws-load-balancer-internal: "true"
 spec:
   type: LoadBalancer
   selector:
