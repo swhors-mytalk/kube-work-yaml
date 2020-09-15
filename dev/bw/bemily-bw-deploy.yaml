@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bemily-file
+  name: bemily-bw
   labels:
-    node_tag: file
+    node_tag: bw
 spec:
   replicas: 1
   selector:
     matchLabels:
-      node_tag: file
+      node_tag: bw
   template:
     metadata:
       labels:
-        node_tag: file
+        node_tag: bw
     spec:
       containers:
-        - name: bemily-file
-          image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/bemily-file:latest
+        - name: bemily-bw
+          image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/bemily-bw:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 38080
@@ -28,4 +28,4 @@ spec:
               memory: "2000Mi"
               cpu: "500m"
       nodeSelector:
-        node_tag: file
+        node_tag: bw
