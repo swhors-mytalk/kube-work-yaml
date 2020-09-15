@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: bemily-auth
-          image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/auth-prod:latest
+          image: 193033533370.dkr.ecr.ap-northeast-2.amazonaws.com/bemily/auth:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 38081
