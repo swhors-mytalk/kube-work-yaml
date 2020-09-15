@@ -4,13 +4,14 @@ metadata:
   name: bemily-bw
   labels:
     node_tag: bw
+  annotation:
+    service.beta.kubernetes.io/aws-load-balancer-internal: "true"
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     node_tag: bw
   ports:
     - name: bemily-bw
-      port: 38080
+      port: 8080
       protocol: TCP
       targetPort: 8080
-      nodePort: 30580
