@@ -5,8 +5,8 @@ metadata:
   labels:
     node_tag: file
 spec:
-  maxReplicas: 4
-  minReplicas: 3
+  maxReplicas: 3
+  minReplicas: 2
   scaleTargetRef:
     apiVersion: extensions/v1beta1
     kind: Deployment
