@@ -12,5 +12,5 @@ spec:
     - name: bemily-api
       port: 7000
       protocol: TCP
-      nodePort: 30680
+      nodePort: 30682
       targetPort: 7000

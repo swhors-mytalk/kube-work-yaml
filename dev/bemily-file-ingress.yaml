@@ -6,7 +6,7 @@ metadata:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/subnets: subnet-00b00b54207b3267b, subnet-0ccbeb255a8b5a2fb
-    alb.ingress.kubernetes.io/tags: Name=dev-bemily-alb, role=api, service=alb
+    alb.ingress.kubernetes.io/tags: Name=dev-bemily-file-alb, role=api, service=alb
     alb.ingress.kubernetes.io/security-groups: sg-0dd1f00ac4b2104f0
     alb.ingress.kubernetes.io/ingress-name: dev-bemily-proxy-alb
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":8080},{"HTTPS":443}]'
@@ -21,3 +21,8 @@ spec:
             backend:
               serviceName: bemily-file
               servicePort: 38080
+          - path: /file/manage/*
+            backend:
+              serviceName: bemily-file
+              servicePort: 38080
+

@@ -1,14 +1,14 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: bemily
+  name: bemily1
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/subnets: subnet-00b00b54207b3267b, subnet-0ccbeb255a8b5a2fb
-    alb.ingress.kubernetes.io/tags: Name=dev-bemily-alb, role=api, service=alb
+    alb.ingress.kubernetes.io/tags: Name=dev-bemily-1-alb, role=api, service=alb
     alb.ingress.kubernetes.io/security-groups: sg-0dd1f00ac4b2104f0
-    alb.ingress.kubernetes.io/ingress-name: dev-bemily-proxy-alb
+    alb.ingress.kubernetes.io/ingress-name: dev-bemily-1-proxy-alb
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":8080},{"HTTPS":443}]'
     alb.ingress.kubernetes.io/healthcheck-path: /hello
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:193033533370:certificate/06b3e092-478b-4901-a279-59b4b141ef71
@@ -25,10 +25,6 @@ spec:
             backend:
               serviceName: bemily-sd
               servicePort: 8080
-          - path: /api/file/*
-            backend:
-              serviceName: bemily-file
-              servicePort: 38080
           - path: /auth/*
             backend:
               serviceName: bemily-auth
@@ -53,7 +49,11 @@ spec:
             backend:
               serviceName: bemily-api
               servicePort: 7000
-          - path: /noti/v1/msg/*
+          - path: /api/file/*
             backend:
-              serviceName: bemily-noti
-              servicePort: 8080
+              serviceName: bemily-file
+              servicePort: 38080
+          - path: /file/manage/*
+            backend:
+              serviceName: bemily-file
+              servicePort: 38080
