@@ -12,5 +12,5 @@ spec:
     - name: bemily-file
       port: 38080
       protocol: TCP
-      targetPort: 38080
       nodePort: 30640
+      targetPort: 38080
