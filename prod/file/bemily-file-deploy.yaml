@@ -5,7 +5,7 @@ metadata:
   labels:
     node_tag: file
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       node_tag: file

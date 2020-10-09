@@ -5,7 +5,7 @@ metadata:
   labels:
     node_tag: api
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       node_tag: api
