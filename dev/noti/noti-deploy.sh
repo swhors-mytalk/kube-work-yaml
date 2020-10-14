@@ -7,7 +7,7 @@
 #
 ########################################################
 
-ENABLED=1
+$ENABLE_CHANGE=1
 
 SVC_NAME=bemily-noti
 
