@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: curator-config
+  labels:
+    k8s-app: curator
+    node_tag: curator
+  namespace: monitoring
+data:
+  action_file.yml: |-
+    ---
+    # Remember, leave a key empty if there is no value.  None will be a string,
+    # not a Python "NoneType"
+    #
+    # Also remember that all examples have 'disable_action' set to True.  If you
+    # want to use this action as a template, be sure to set this to False after
+    # copying it.
+    actions:
+      1:
+        action: delete_indices
+        description: "Clean up ES by deleting old indices"
+        options:
+          timeout_override:
+          continue_if_exception: False
+          disable_action: False
+          ignore_empty_list: True
+        filters:
+        - filtertype: pattern
+          kind: prefix
+          value: logstash-
+        - filtertype: age
+          source: name
+          direction: older
+          timestring: '%Y.%m.%d'
+          unit: days
+          unit_count: 10
+  config.yml: |-
+    ---
+    # Remember, leave a key empty if there is no value.  None will be a string,
+    # not a Python "NoneType"
+    client:
+      hosts:
+        - vpc-dev-an2-els-bemily2-6uktzhiv3ryurs7lszrkuj27wu.ap-northeast-2.es.amazonaws.com
+      port: 443
+      use_ssl: True
+      timeout: 30
+    logging:
+      loglevel: DEBUG
+      logformat: default
+      #blacklist: ['elasticsearch', 'urllib3']
